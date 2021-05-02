@@ -17,9 +17,7 @@ This repository contains the scripts used to setup and run a dedicated CSGO serv
 ## Donwload & Install
 
 ~~~~bash
-cd /folder/where/you/want/to/install/the/server
-
-curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts/setup.sh | bash
+bash <(curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts/setup.sh)
 ~~~~
 
 ## Misc
