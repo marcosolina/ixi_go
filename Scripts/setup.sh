@@ -20,3 +20,5 @@ read -p "Choose your SERVER  password: " SERVER_PASSWORD
 sed -i -e "s/RCON_PASSWORD/$RCON_PASSWORD/g" $CFG_FOLDER/server.cfg
 sed -i -e "s/SERVER_PASSWORD/$SERVER_PASSWORD/g" $CFG_FOLDER/server.cfg
 
+echo "Installing Steam CMD"
+$SCRIPTS_FOLDER/installSteam.sh
