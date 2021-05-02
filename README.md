@@ -1,4 +1,4 @@
-# CSGO Server used with my friend / colleagues
+# CSGO Server used with my friends / colleagues
 
 ![Logo](./Misc/Pictures/ixigo-logo.png)
 
