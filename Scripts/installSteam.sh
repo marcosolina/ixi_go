@@ -20,7 +20,7 @@ then
   read -p "Type the IP of the machine where to copy the *.dem files: "    SSH_IP
   read -p "Type the destination folder where to copy the *.dem files: "   SSH_FOLDER
   
-  CSGO_INSTALL_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/csgoInstalDir
+  CSGO_INSTALL_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/CsgoServer
 
   echo ""                                                     | sudo tee -a /etc/profile
   echo "export ENV_STEAM_CSGO_KEY=$STEAM_CSGO_KEY"            | sudo tee -a /etc/profile
