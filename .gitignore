@@ -1,0 +1,9 @@
+/.project
+/CsgoServer/*
+!/CsgoServer/csgo/addons/*
+!/CsgoServer/csgo/cfg/gamemode_competitive_server.cfg
+!/CsgoServer/csgo/cfg/server.cfg
+!/CsgoServer/csgo/cfg/autoexec.cfg
+!/CsgoServer/csgo/GamesModes_Server.txt
+!/CsgoServer/csgo/subscribed_collection_ids.txt
+!/CsgoServer/csgo/subscribed_file_ids.txt
