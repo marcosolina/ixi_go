@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo ""
+echo ""
 read -p "Where do you want to install the server? (/full/path/): " INSTALL_PATH
 cd $INSTALL_PATH
 
