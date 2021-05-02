@@ -9,6 +9,10 @@ then
   sudo apt install -y lib32gcc1 steamcmd
 fi
 
+CSGO_SCRIPTS_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/Scripts
+echo ""
+echo "To start the server run: $CSGO_SCRIPTS_FOLDER/startIxigoServer.sh"
+echo ""
 read -p "Do you want to set the Env Variables? (y/n): " setEnvProps
 
 if [ $setEnvProps = 'y' ]
@@ -19,7 +23,7 @@ then
   read -p "Type the user to use when copying the *.dem files: "           SSH_USER
   read -p "Type the IP of the machine where to copy the *.dem files: "    SSH_IP
   read -p "Type the destination folder where to copy the *.dem files: "   SSH_FOLDER
-  
+
   CSGO_INSTALL_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/CsgoServer
 
   echo ""                                                     | sudo tee -a /etc/profile
