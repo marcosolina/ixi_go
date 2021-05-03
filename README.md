@@ -22,9 +22,21 @@ bash <(curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts
 
 ## Misc
 
-Remove Windows characters from the scripts
+- Remove Windows characters from the scripts
 
-~~~~bash
-# Remove possible Windows characters
-sed -i -e 's/\r$//' <script_name>
-~~~~
+  ~~~~bash
+  # Remove possible Windows characters
+  sed -i -e 's/\r$//' <script_name>
+  ~~~~
+  
+- Run the server in the background
+  ~~~~bash
+  # To start the serve in the background
+  screen -A -m -d -S <CHOOSE_A_NAME> -L /path/to/the/startIxigoServer.sh
+  
+  # To re-attach the process
+  screen -r <CHOOSE_A_NAME>
+  
+  # To detach again after re-attaching
+  ctrl+a and then press "d"
+  ~~~~
