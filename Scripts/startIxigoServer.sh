@@ -76,6 +76,10 @@ echo ""
 
 maps=(
 "ar_dizzy"
+"de_pitstop"
+"de_calavera"
+"de_mocha"
+"ar_grind"
 "ar_lunacy"
 "ar_monastery"
 "ar_shoots"
