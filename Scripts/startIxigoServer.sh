@@ -79,7 +79,7 @@ maps=(
 "de_pitstop"
 "de_calavera"
 "de_mocha"
-"ar_grind"
+"de_grind"
 "ar_lunacy"
 "ar_monastery"
 "ar_shoots"
