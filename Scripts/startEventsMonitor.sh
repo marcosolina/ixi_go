@@ -21,7 +21,7 @@ do
                 OLD_VALUE="NO"
                 echo "sending event $NEW_VALUE"
                 echo "NO" > $EVENT_FILE
-                curl --location --request POST "http://$ENV_SSH_IP:8087/rcon/event" --header 'Content-Type: application/json' --data-raw "{\"eventName\": \"$NEW_VALUE\"}"
+                curl --location --request POST "http://$ENV_SSH_IP:8763/zuul/csgo-rest-api/rcon/event" --header 'Content-Type: application/json' --data-raw "{\"eventName\": \"$NEW_VALUE\"}"
                 if [ "$NEW_VALUE" = "End Map" ]; then
                         sleep 35
                         DATE=$(date +'%Y-%m-%d')
