@@ -287,6 +287,10 @@
 				"ar_dizzy"						""
 				"ar_lunacy"						""
 				"ar_shoots"						""
+				"de_pitstop"						""
+				"de_calavera"						""
+				"de_mocha"						""
+				"de_grind"						""
 				"cs_agency"						""
 				"cs_apollo"						""
 				"cs_assault"						""
@@ -318,7 +322,6 @@
 				"dz_blacksite"						""
 				"dz_frostbite"						""
 				"dz_sirocco"						""
-				"gd_cbble"						""
 				"ar_baggage"						""
 			}
 		}
