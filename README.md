@@ -40,3 +40,5 @@ bash <(curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts
   # To detach again after re-attaching
   ctrl+a and then press "d"
   ~~~~
+
+- [\[CS:GO\] Fix Competitive Warmup](https://forums.alliedmods.net/showthread.php?t=329053)
