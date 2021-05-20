@@ -172,19 +172,19 @@ echo ""
 steamcmd +login anonymous +force_install_dir $CSGO_INSTALL_FOLDER_FOLDER +app_update 740 +quit
 $CSGO_INSTALL_FOLDER_FOLDER/srcds_run -game csgo -console -usercon -port 27015 +ip $HOST_IP +game_type 0 +game_mode 1 +mapgroup $MAP_GROUP +map $MAP_START -authkey $STEAM_API_KEY +sv_setsteamaccount $STEAM_CSGO_KEY -net_port_try 1
 
-if [ $DAY_OF_WEEK = $IXICO_DAY ]
-then
-  echo ""
-  echo "Copying the demo files"
-  echo ""
-  DATE=$(date +'%Y-%m-%d')
-  FOLDER_DEM="$ENV_SSH_FOLDER/demfiles/$DATE"
+#if [ $DAY_OF_WEEK = $IXICO_DAY ]
+#then
+#  echo ""
+#  echo "Copying the demo files"
+#  echo ""
+#  DATE=$(date +'%Y-%m-%d')
+#  FOLDER_DEM="$ENV_SSH_FOLDER/demfiles/$DATE"
 
-  ssh $ENV_SSH_USER@$ENV_SSH_IP mkdir -p $FOLDER_DEM
-  #ssh $ENV_SSH_USER@$ENV_SSH_IP rm -rf $ENV_SSH_FOLDER/*
-  scp $CSGO_INSTALL_FOLDER_FOLDER/csgo/*.dem $ENV_SSH_USER@$ENV_SSH_IP:$FOLDER_DEM
-  curl --location --request POST 'https://marco.selfip.net/demparser/newdata'
-fi
+#  ssh $ENV_SSH_USER@$ENV_SSH_IP mkdir -p $FOLDER_DEM
+#  #ssh $ENV_SSH_USER@$ENV_SSH_IP rm -rf $ENV_SSH_FOLDER/*
+#  scp $CSGO_INSTALL_FOLDER_FOLDER/csgo/*.dem $ENV_SSH_USER@$ENV_SSH_IP:$FOLDER_DEM
+#  curl --location --request POST 'https://marco.selfip.net/demparser/newdata'
+#fi
 
 echo "End"
 
