@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Install Steam CMD
 read -p "Do you want to install steamcmd? (y/n): " installSteamCmd
 if [ $installSteamCmd = 'y' ]
 then
@@ -9,6 +10,11 @@ then
   sudo apt install -y lib32gcc1 steamcmd
 fi
 
+
+# I Used some ENV properties to automate the transfer
+# of the DEM files on the Rasp that is going to process
+# them and extract the scores that we use for our
+# statistics
 CSGO_SCRIPTS_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/Scripts
 echo ""
 echo "To start the server run: $CSGO_SCRIPTS_FOLDER/startIxigoServer.sh"
