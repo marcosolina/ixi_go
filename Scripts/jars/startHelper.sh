@@ -2,9 +2,9 @@
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 APP_FOLDER=$SCRIPT_DIR/
-APP_JAR=IxiGoHelper.jar
-APP_NOHUP=${APP_FOLDER}IxiGoHelper.log
-APP_PID_FILE=${APP_FOLDER}IxiGoHelper.pid
+APP_JAR=IxigoServerHelper.jar
+APP_NOHUP=${APP_FOLDER}IxigoServerHelper.log
+APP_PID_FILE=${APP_FOLDER}IxigoServerHelper.pid
 
 case "$1" in
 start)
