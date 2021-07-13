@@ -26,13 +26,16 @@ SCRIPTS_FOLDER=$INSTALL_PATH/ixi_go/Scripts
 JAR_FOLDER=$INSTALL_PATH/ixi_go/Scripts/jars
 CFG_FOLDER=$INSTALL_PATH/ixi_go/CsgoServer/csgo/cfg
 
-mv /tmp/csgo_util/IxigoDiscordBot/target/IxigoDiscordBot*.jar $JAR_FOLDER/IxigoDiscordBot.jar
-mv /tmp/csgo_util/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar
+sed -i -e 's/\r$//' $JAR_FOLDER/*
+chmod +x $JAR_FOLDER/*
 
 # Remove any "Windows" character and make
 # the scripts executable
 sed -i -e 's/\r$//' $SCRIPTS_FOLDER/*
 chmod +x $SCRIPTS_FOLDER/*
+
+mv /tmp/csgo_util/IxigoDiscordBot/target/IxigoDiscordBot*.jar $JAR_FOLDER/IxigoDiscordBot.jar
+mv /tmp/csgo_util/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar
 
 # Set the IxiGo Game server passowrd
 read -p "Choose your RCON password: " RCON_PASSWORD
