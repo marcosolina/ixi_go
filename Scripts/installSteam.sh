@@ -32,13 +32,11 @@ then
   read -p "Type here the password of the IxiGo Config server: "           IXIGO_CFG_SRV_PW
 
   CSGO_INSTALL_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/CsgoServer
-  HOST_IP=$(hostname -I | awk '{print $1}')
 
   echo ""                                                     | sudo tee -a /etc/profile
   echo "export ENV_STEAM_CSGO_KEY=$STEAM_CSGO_KEY"            | sudo tee -a /etc/profile
   echo "export ENV_STEAM_API_KEY=$STEAM_API_KEY"              | sudo tee -a /etc/profile
   echo "export ENV_CSGO_INSTALL_FOLDER=$CSGO_INSTALL_FOLDER"  | sudo tee -a /etc/profile
-  echo "export ENV_HOST_IP=$HOST_IP"                          | sudo tee -a /etc/profile
   echo "export IXIGO_PROFILE=$IXIGO_PROFILE"                  | sudo tee -a /etc/profile
   echo "export IXIGO_EUREKA_SERVER=$IXIGO_EUREKA_SERVER_URI"  | sudo tee -a /etc/profile
   echo "export IXIGO_CONFIG_SERVER_URI=$IXIGO_CONFIG_SRV_URI" | sudo tee -a /etc/profile

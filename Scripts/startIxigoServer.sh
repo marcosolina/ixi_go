@@ -169,6 +169,8 @@ echo "You choose: ${maps[$startMap]}"
 MAP_START=${maps[$startMap]}
 echo ""
 
+HOST_IP=$(hostname -I | awk '{print $1}')
+
 steamcmd +login anonymous +force_install_dir $CSGO_INSTALL_FOLDER_FOLDER +app_update 740 +quit
 $CSGO_INSTALL_FOLDER_FOLDER/srcds_run -game csgo -console -usercon -port 27015 +ip $HOST_IP +game_type 0 +game_mode 1 +mapgroup $MAP_GROUP +map $MAP_START -authkey $STEAM_API_KEY +sv_setsteamaccount $STEAM_CSGO_KEY -net_port_try 1
 
