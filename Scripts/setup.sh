@@ -14,8 +14,6 @@ git clone https://github.com/marcosolina/javautils.git
 git clone https://github.com/marcosolina/WebJar.git
 
 mvn clean install -f /tmp/javautils/Utils/pom.xml
-mvn clean install -f /tmp/javautils/Partitioning/pom.xml
-mvn clean install -f /tmp/WebJar/pom.xml
 mvn clean package -f ./csgo_util/IxigoServerHelper/pom.xml
 mvn clean package -f ./csgo_util/IxigoDiscordBot/pom.xml
 
