@@ -4,13 +4,32 @@
 echo ""
 echo ""
 read -p "Where do you want to install the server? (/full/path/): " INSTALL_PATH
-cd $INSTALL_PATH
 
-git clone https://github.com/marcosolina/ixi_go.git
+sudo apt update
+sudo apt install -y git default-jre maven
+
+cd /tmp
+git clone https://github.com/marcosolina/csgo_util.git
+git clone https://github.com/marcosolina/javautils.git
+git clone https://github.com/marcosolina/WebJar.git
+
+mvn clean install -f /tmp/javautils/Utils/pom.xml
+mvn clean install -f /tmp/javautils/Partitioning/pom.xml
+mvn clean install -f /tmp/WebJar/pom.xml
+mvn clean package -f ./csgo_util/IxigoServerHelper/pom.xml
+mvn clean package -f ./csgo_util/IxigoDiscordBot/pom.xml
+
+
+cd $INSTALL_PATH
+git clone -b cloud https://github.com/marcosolina/ixi_go.git
 
 
 SCRIPTS_FOLDER=$INSTALL_PATH/ixi_go/Scripts
+JAR_FOLDER=$INSTALL_PATH/ixi_go/Scripts/jars
 CFG_FOLDER=$INSTALL_PATH/ixi_go/CsgoServer/csgo/cfg
+
+mv /tmp/csgo_util/IxigoDiscordBot/target/IxigoDiscordBot*.jar $JAR_FOLDER/IxigoDiscordBot.jar
+mv /tmp/csgo_util/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar
 
 # Remove any "Windows" character and make
 # the scripts executable
