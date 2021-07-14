@@ -31,7 +31,7 @@ then
 fi
 
 
-apt install -y curl git default-jre maven
+apt install -y curl git default-jre maven screen
 
 cd /tmp
 git clone https://github.com/marcosolina/csgo_util.git
