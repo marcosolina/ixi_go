@@ -47,8 +47,11 @@ then
   echo "export IXIGO_POSTGRES_USER=$IXIGO_POSTGRES_USER"      | sudo tee -a /etc/profile
   echo "export IXIGO_POSTGRES_PASSW=$IXIGO_POSTGRES_PASSW"    | sudo tee -a /etc/profile
 
-  
+  echo ""
+  echo ""
   echo "Please restart your machine"
+  echo ""
+  echo ""
 fi
 
 

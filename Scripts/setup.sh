@@ -22,6 +22,8 @@ useradd -s /bin/bash -m -g $IXIGO_GROUP $IXIGO_USER_NAME
 echo "Set a password for the user: $IXIGO_USER_NAME"
 passwd $IXIGO_USER_NAME
 
+echo "$IXIGO_USER_NAME ALL = NOPASSWD: /sbin/shutdown"    | sudo tee -a /etc/sudoers
+
 read -p "Do you want to install the DynDns client? (y/n): " INSTALL_DYNDNS
 if [ $INSTALL_DYNDNS = 'y' ]
 then
@@ -59,7 +61,11 @@ chmod +x $SCRIPTS_FOLDER/*
 mv /tmp/csgo_util/IxigoDiscordBot/target/IxigoDiscordBot*.jar $JAR_FOLDER/IxigoDiscordBot.jar
 mv /tmp/csgo_util/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar
 
+rm -rf /root/.m2/*
+
 # Set the IxiGo Game server passowrd
+echo ""
+echo ""
 read -p "Choose your RCON password: " RCON_PASSWORD
 read -p "Choose your SERVER  password: " SERVER_PASSWORD
 

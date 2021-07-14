@@ -25,3 +25,5 @@ sleep 60
 
 # All done, stop the helper
 $SCRIPT_DIR/jars/startHelper.sh stop
+
+sudo shutdown now
