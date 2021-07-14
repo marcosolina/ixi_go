@@ -30,6 +30,8 @@ then
   read -p "Type here the url of the IxiGo Config server (example: http://localhost:8888/config): "                  IXIGO_CONFIG_SRV_URI
   read -p "Type here the username of the IxiGo Config server: "           IXIGO_CFG_SRV_USER
   read -p "Type here the password of the IxiGo Config server: "           IXIGO_CFG_SRV_PW
+  read -p "Type here the Postgres username: "                             IXIGO_POSTGRES_USER
+  read -p "Type here the Postgres password: "                             IXIGO_POSTGRES_PASSW
 
   CSGO_INSTALL_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/CsgoServer
 
@@ -42,6 +44,8 @@ then
   echo "export IXIGO_CONFIG_SERVER_URI=$IXIGO_CONFIG_SRV_URI" | sudo tee -a /etc/profile
   echo "export IXIGO_CONFIG_SERVER_USER=$IXIGO_CFG_SRV_USER"  | sudo tee -a /etc/profile
   echo "export IXIGO_CONFIG_SERVER_PASSW=$IXIGO_CFG_SRV_PW"   | sudo tee -a /etc/profile
+  echo "export IXIGO_POSTGRES_USER=$IXIGO_POSTGRES_USER"      | sudo tee -a /etc/profile
+  echo "export IXIGO_POSTGRES_PASSW=$IXIGO_POSTGRES_PASSW"    | sudo tee -a /etc/profile
 
   
   echo "Restarting the machine..."
