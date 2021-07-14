@@ -11,7 +11,6 @@ sudo apt install -y git default-jre maven
 cd /tmp
 git clone https://github.com/marcosolina/csgo_util.git
 git clone https://github.com/marcosolina/javautils.git
-git clone https://github.com/marcosolina/WebJar.git
 
 mvn clean install -f /tmp/javautils/Utils/pom.xml
 mvn clean package -f ./csgo_util/IxigoServerHelper/pom.xml
