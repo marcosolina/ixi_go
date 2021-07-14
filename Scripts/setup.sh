@@ -43,7 +43,7 @@ mvn clean package -f ./csgo_util/IxigoDiscordBot/pom.xml
 
 
 cd $INSTALL_PATH
-git clone -b cloud https://github.com/marcosolina/ixi_go.git
+git clone https://github.com/marcosolina/ixi_go.git
 
 
 SCRIPTS_FOLDER=$INSTALL_PATH/ixi_go/Scripts
