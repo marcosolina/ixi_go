@@ -6,10 +6,10 @@ This repository contains the scripts used to setup and run a dedicated CSGO serv
 
 ## Requirements
 
-- OS: [Ubuntu Server 18.04](https://releases.ubuntu.com/18.04/ubuntu-18.04.5-live-server-amd64.iso)
+- OS: [Ubuntu Server 21.04](https://releases.ubuntu.com/21.04/ubuntu-21.04-live-server-amd64.iso)
 - CPU: Intel Core Duo E6600 (2-2.8GHz+) or AMD Phenom X3 8750+
 - RAM: 2GB+
-- HDD: 35GB+
+- HDD: 40GB+
 - [Steam Game Server Login Token (GSLT)](https://developer.valvesoftware.com/wiki/Counter-Strike:_Global_Offensive_Dedicated_Servers)
 - [Steam Web API Key](https://developer.valvesoftware.com/wiki/CSGO_Workshop_For_Server_Operators)
 - [IxiGo Utils](https://github.com/marcosolina/csgo_util)
