@@ -1,12 +1,35 @@
 #!/bin/bash
 
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
+
+apt update
+
 # Clone the repo in the folder specified by the user
 echo ""
 echo ""
 read -p "Where do you want to install the server? (/full/path/): " INSTALL_PATH
 
-sudo apt update
-sudo apt install -y git default-jre maven
+IXIGO_GROUP=ixigo
+
+addgroup $IXIGO_GROUP
+
+read -p "Ixigo User Name: " IXIGO_USER_NAME
+useradd -s /bin/bash -m -g $IXIGO_GROUP $IXIGO_USER_NAME
+
+echo "Set a password for the user: $IXIGO_USER_NAME"
+passwd $IXIGO_USER_NAME
+
+read -p "Do you want to install the DynDns client? (y/n): " INSTALL_DYNDNS
+if [ $INSTALL_DYNDNS = 'y' ]
+then
+  apt install -y ddclient
+fi
+
+
+apt install -y curl git default-jre maven
 
 cd /tmp
 git clone https://github.com/marcosolina/csgo_util.git
@@ -45,3 +68,5 @@ sed -i -e "s/SERVER_PASSWORD/$SERVER_PASSWORD/g" $CFG_FOLDER/server.cfg
 
 echo "Installing Steam CMD"
 $SCRIPTS_FOLDER/installSteam.sh
+
+chown $IXIGO_GROUP:$IXIGO_USER_NAME -R $INSTALL_PATH/ixi_go

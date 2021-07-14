@@ -7,7 +7,7 @@ then
   sudo add-apt-repository multiverse
   sudo dpkg --add-architecture i386
   sudo apt update
-  sudo apt install -y lib32gcc1 steamcmd ddclient
+  sudo apt install -y lib32gcc1 steamcmd
 fi
 
 
@@ -48,9 +48,7 @@ then
   echo "export IXIGO_POSTGRES_PASSW=$IXIGO_POSTGRES_PASSW"    | sudo tee -a /etc/profile
 
   
-  echo "Restarting the machine..."
-  sleep 5
-  sudo reboot now
+  echo "Please restart your machine"
 fi
 
 
