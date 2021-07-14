@@ -3,20 +3,11 @@
 # for the STEAM_GSLT https://developer.valvesoftware.com/wiki/Counter-Strike:_Global_Offensive_Dedicated_Servers
 # for the STEAM_WEB_API_KEY https://developer.valvesoftware.com/wiki/CSGO_Workshop_For_Server_Operators
 
-
-STEAM_CSGO_KEY=$ENV_STEAM_CSGO_KEY
-STEAM_API_KEY=$ENV_STEAM_API_KEY
-CSGO_INSTALL_FOLDER_FOLDER=$ENV_CSGO_INSTALL_FOLDER
-HOST_IP=$ENV_HOST_IP
-
 MAP_GROUP=$1
 MAP_START=$2
 
-rm -rf $CSGO_INSTALL_FOLDER_FOLDER/csgo/*.dem
-rm -rf $CSGO_INSTALL_FOLDER_FOLDER/csgo/backup_round*.txt
-
-DAY_OF_WEEK=$(date +%u)
-IXICO_DAY=1
+rm -rf $ENV_CSGO_INSTALL_FOLDER/csgo/*.dem
+rm -rf $ENV_CSGO_INSTALL_FOLDER/csgo/backup_round*.txt
 
 echo ""
 echo ""
@@ -28,23 +19,6 @@ echo "  \____|____(_)\____|\___/  |____/ \___|\__,_|_|\___\__,_|\__\___|\__,_| |
 echo ""
 echo ""
 echo ""        
-
-if [ $DAY_OF_WEEK = $IXICO_DAY ]
-then  
-  echo ""
-  echo ""
-  echo ""        
-  echo "  ___ _     _       _   _            ___      _             __  __                 _               _   _ _       _     _   _ _ _      __  "
-  echo " |_ _| |_  (_)___  | |_| |__   ___  |_ _|_  _(_) ___ ___   |  \/  | ___  _ __   __| | __ _ _   _  | \ | (_) __ _| |__ | |_| | | |  _  \ \ "
-  echo "  | || __| | / __| | __| '_ \ / _ \  | |\ \/ / |/ __/ _ \  | |\/| |/ _ \| '_ \ / _' |/ _' | | | | |  \| | |/ _' | '_ \| __| | | | (_)  | |"
-  echo "  | || |_  | \__ \ | |_| | | |  __/  | | >  <| | (_| (_) | | |  | | (_) | | | | (_| | (_| | |_| | | |\  | | (_| | | | | |_|_|_|_|  _   | |"
-  echo " |___|\__| |_|___/  \__|_| |_|\___| |___/_/\_\_|\___\___/  |_|  |_|\___/|_| |_|\__,_|\__,_|\__, | |_| \_|_|\__, |_| |_|\__(_|_|_) (_)  | |"
-  echo "                                                                                           |___/           |___/                      /_/ "
-  echo ""
-  echo ""
-  echo ""
-fi
-
 echo ""
 
 mapsGroup=(
@@ -63,7 +37,8 @@ done
 if [ -n "$1" ]; then
   echo "Start group provided as intput parameter"
 else
-  read -p "Choose the start map group (type the number): " startGroup
+  #read -p "Choose the start map group (type the number): " startGroup
+  startGroup=0
 fi
 
 echo ""
@@ -160,7 +135,8 @@ done
 if [ -n "$2" ]; then
   echo "Start map specified as input param"
 else
-  read -p "Choose the start map (type the number): "  startMap
+  #read -p "Choose the start map (type the number): "  startMap
+  startMap=0
 fi
 
 
@@ -169,24 +145,10 @@ echo "You choose: ${maps[$startMap]}"
 MAP_START=${maps[$startMap]}
 echo ""
 
-steamcmd +login anonymous +force_install_dir $CSGO_INSTALL_FOLDER_FOLDER +app_update 740 +quit
-$CSGO_INSTALL_FOLDER_FOLDER/srcds_run -game csgo -console -usercon -port 27015 +ip $HOST_IP +game_type 0 +game_mode 1 +mapgroup $MAP_GROUP +map $MAP_START -authkey $STEAM_API_KEY +sv_setsteamaccount $STEAM_CSGO_KEY -net_port_try 1
+HOST_IP=$(hostname -I | awk '{print $1}')
 
-# This is now managed by the Helper Service.
-# Keeping it just in case...
-#if [ $DAY_OF_WEEK = $IXICO_DAY ]
-#then
-#  echo ""
-#  echo "Copying the demo files"
-#  echo ""
-#  DATE=$(date +'%Y-%m-%d')
-#  FOLDER_DEM="$ENV_SSH_FOLDER/demfiles/$DATE"
-
-#  ssh $ENV_SSH_USER@$ENV_SSH_IP mkdir -p $FOLDER_DEM
-#  #ssh $ENV_SSH_USER@$ENV_SSH_IP rm -rf $ENV_SSH_FOLDER/*
-#  scp $CSGO_INSTALL_FOLDER_FOLDER/csgo/*.dem $ENV_SSH_USER@$ENV_SSH_IP:$FOLDER_DEM
-#  curl --location --request POST 'https://marco.selfip.net/demparser/newdata'
-#fi
+steamcmd +login anonymous +force_install_dir $ENV_CSGO_INSTALL_FOLDER +app_update 740 +quit
+$ENV_CSGO_INSTALL_FOLDER/srcds_run -game csgo -console -usercon -port 27015 +ip $HOST_IP +game_type 0 +game_mode 1 +mapgroup $MAP_GROUP +map $MAP_START -authkey $ENV_STEAM_API_KEY +sv_setsteamaccount $ENV_STEAM_CSGO_KEY -net_port_try 1
 
 echo "End"
 

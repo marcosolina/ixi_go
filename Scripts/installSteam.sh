@@ -25,10 +25,13 @@ if [ $setEnvProps = 'y' ]
 then
   read -p "Type here your STEAM CSGO KEY: "                               STEAM_CSGO_KEY
   read -p "Type here your STEAM API KEY: "                                STEAM_API_KEY
-  read -p "Type the IP of this host: "                                    HOST_IP
-  read -p "Type the user to use when copying the *.dem files: "           SSH_USER
-  read -p "Type the IP of the machine where to copy the *.dem files: "    SSH_IP
-  read -p "Type the destination folder where to copy the *.dem files: "   SSH_FOLDER
+  read -p "Type here your IxiGo Profile to user: "                        IXIGO_PROFILE
+  read -p "Type here the url of the IxiGo Eureka server (example: http://localhost:8765/ixigodiscovery/eureka): "   IXIGO_EUREKA_SERVER_URI
+  read -p "Type here the url of the IxiGo Config server (example: http://localhost:8888/config): "                  IXIGO_CONFIG_SRV_URI
+  read -p "Type here the username of the IxiGo Config server: "           IXIGO_CFG_SRV_USER
+  read -p "Type here the password of the IxiGo Config server: "           IXIGO_CFG_SRV_PW
+  read -p "Type here the Postgres username: "                             IXIGO_POSTGRES_USER
+  read -p "Type here the Postgres password: "                             IXIGO_POSTGRES_PASSW
 
   CSGO_INSTALL_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/CsgoServer
 
@@ -36,14 +39,19 @@ then
   echo "export ENV_STEAM_CSGO_KEY=$STEAM_CSGO_KEY"            | sudo tee -a /etc/profile
   echo "export ENV_STEAM_API_KEY=$STEAM_API_KEY"              | sudo tee -a /etc/profile
   echo "export ENV_CSGO_INSTALL_FOLDER=$CSGO_INSTALL_FOLDER"  | sudo tee -a /etc/profile
-  echo "export ENV_HOST_IP=$HOST_IP"                          | sudo tee -a /etc/profile
-  echo "export ENV_SSH_USER=$SSH_USER"                        | sudo tee -a /etc/profile
-  echo "export ENV_SSH_IP=$SSH_IP"                            | sudo tee -a /etc/profile
-  echo "export ENV_SSH_FOLDER=$SSH_FOLDER"                    | sudo tee -a /etc/profile
-  
-  echo "Restarting the machine..."
-  sleep 5
-  sudo reboot now
+  echo "export IXIGO_PROFILE=$IXIGO_PROFILE"                  | sudo tee -a /etc/profile
+  echo "export IXIGO_EUREKA_SERVER=$IXIGO_EUREKA_SERVER_URI"  | sudo tee -a /etc/profile
+  echo "export IXIGO_CONFIG_SERVER_URI=$IXIGO_CONFIG_SRV_URI" | sudo tee -a /etc/profile
+  echo "export IXIGO_CONFIG_SERVER_USER=$IXIGO_CFG_SRV_USER"  | sudo tee -a /etc/profile
+  echo "export IXIGO_CONFIG_SERVER_PASSW=$IXIGO_CFG_SRV_PW"   | sudo tee -a /etc/profile
+  echo "export IXIGO_POSTGRES_USER=$IXIGO_POSTGRES_USER"      | sudo tee -a /etc/profile
+  echo "export IXIGO_POSTGRES_PASSW=$IXIGO_POSTGRES_PASSW"    | sudo tee -a /etc/profile
+
+  echo ""
+  echo ""
+  echo "Please restart your machine"
+  echo ""
+  echo ""
 fi
 
 
