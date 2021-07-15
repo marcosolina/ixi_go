@@ -16,9 +16,6 @@ fi
 # them and extract the scores that we use for our
 # statistics
 CSGO_SCRIPTS_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/Scripts
-echo ""
-echo "To start the server run: $CSGO_SCRIPTS_FOLDER/startIxigoServer.sh"
-echo ""
 read -p "Do you want to set the Env Variables? (y/n): " setEnvProps
 
 if [ $setEnvProps = 'y' ]
@@ -47,11 +44,13 @@ then
   echo "export IXIGO_POSTGRES_USER=$IXIGO_POSTGRES_USER"      | sudo tee -a /etc/profile
   echo "export IXIGO_POSTGRES_PASSW=$IXIGO_POSTGRES_PASSW"    | sudo tee -a /etc/profile
 
-  echo ""
-  echo ""
-  echo "Please restart your machine"
-  echo ""
-  echo ""
 fi
 
-
+echo ""
+echo ""
+echo "Please restart your machine"
+echo ""
+echo ""
+echo ""
+echo "Then to start the server run: $CSGO_SCRIPTS_FOLDER/startAll.sh"
+echo ""

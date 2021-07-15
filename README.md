@@ -32,7 +32,7 @@ bash <(curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts
 - Run the server in the background
   ~~~~bash
   # To start the serve in the background
-  screen -A -m -d -S <CHOOSE_A_NAME> -L /path/to/the/startIxigoServer.sh
+  screen -A -m -d -S <CHOOSE_A_NAME> -L /path/to/the/startAll.sh
   
   # To re-attach the process
   screen -r <CHOOSE_A_NAME>
