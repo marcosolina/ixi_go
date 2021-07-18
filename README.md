@@ -6,7 +6,7 @@ This repository contains the scripts used to setup and run a dedicated CSGO serv
 
 ## Requirements
 
-- OS: [Ubuntu Server 20.04](https://releases.ubuntu.com/20.04.2/ubuntu-20.04.2-live-server-amd64.iso)
+- OS: [Ubuntu Server 18.04](https://releases.ubuntu.com/18.04/ubuntu-18.04.5-live-server-amd64.iso)
 - CPU: Intel Core Duo E6600 (2-2.8GHz+) or AMD Phenom X3 8750+
 - RAM: 2GB+
 - HDD: 40GB+
