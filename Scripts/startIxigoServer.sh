@@ -80,9 +80,9 @@ done
 if [ -n "$2" ]; then
   echo "Start map specified as input param"
 else
-  #read -p "Choose the start map (type the number): "  startMap
-  $arrSize=${#arr[@]}-1
-  $randomMapIndex=$(($RANDOM % $arrSize))
+  #read -p "Choose the start map (type the number): "  startMaip
+  arrSize=$((${#maps[@]} - 1))
+  randomMapIndex=$(($RANDOM % $arrSize))
   startMap=$randomMapIndex
 fi
 
