@@ -2,11 +2,6 @@
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-# Preparing the file that is going to be used by
-# the Java Helper Service
-EVENT_FILE=$ENV_CSGO_INSTALL_FOLDER/csgo/addons/sourcemod/event.txt
-echo "NO" > $EVENT_FILE
-
 # Start the Helper Service and the
 # IxiGo game server
 $SCRIPT_DIR/jars/startHelper.sh start

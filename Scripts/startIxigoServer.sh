@@ -6,8 +6,13 @@
 MAP_GROUP=$1
 MAP_START=$2
 
-rm -rf $ENV_CSGO_INSTALL_FOLDER/csgo/*.dem
+#rm -rf $ENV_CSGO_INSTALL_FOLDER/csgo/*.dem
 rm -rf $ENV_CSGO_INSTALL_FOLDER/csgo/backup_round*.txt
+
+# Preparing the file that is going to be used by
+# the Java Helper Service
+EVENT_FILE=$ENV_CSGO_INSTALL_FOLDER/csgo/addons/sourcemod/event.txt
+echo "NO" > $EVENT_FILE
 
 echo ""
 echo ""
@@ -46,77 +51,25 @@ echo "You choose: ${mapsGroup[$startGroup]}"
 MAP_GROUP=${mapsGroup[$startGroup]}
 echo ""
 
-
+# Some small maps to be used as "starting map".
+# Use a small map while we wait for everybody to join
 maps=(
 "ar_dizzy"
 "de_pitstop"
 "de_calavera"
-"de_mocha"
-"de_grind"
-"ar_lunacy"
-"ar_monastery"
-"ar_shoots"
-"cs_agency"
-"cs_apollo"
-"cs_assault"
-"cs_italy"
 "cs_militia"
-"cs_office"
-"de_ancient"
-"de_anubis"
 "de_bank"
-"de_cache"
-"de_canals"
-"de_cbble"
-"de_dust2"
-"de_elysion"
-"de_engage"
 "de_guard"
-"de_inferno"
 "de_lake"
-"de_mirage"
-"de_nuke"
-"de_overpass"
 "de_safehouse"
-"de_shortdust"
-"de_shortnuke"
 "de_stmarc"
-"de_sugarcane"
-"de_train"
-"de_vertigo"
-"workshop/125786610/cs_backalley"
-"workshop/129042069/cs_bank"
-"workshop/600914785/cs_cruise"
 "workshop/135827566/cs_estate"
-"workshop/273415773/cs_hijack"
 "workshop/127012360/cs_museum"
-"workshop/206678373/cs_valley"
-"workshop/600728667/de_aqueduct"
-"workshop/320674385/de_arcade_v2"
 "workshop/1561348377/de_aztec"
 "workshop/1302060184/de_beerhouse"
-"workshop/529733812/de_blast_beta02"
-"workshop/2011784264/de_blossom"
-"workshop/874801875/de_Codewise2"
-"workshop/215971897/de_coldwater"
-"workshop/1414531578/de_cornerwork"
-"workshop/239672577/de_crown"
 "workshop/1387732091/de_dst"
-"workshop/2175304484/de_engage"
-"workshop/401145257/de_fire"
-"workshop/2105680462/de_firenze"
-"workshop/1958745897/de_marine"
-"workshop/221603249/de_marquis"
-"workshop/2064064363/de_miracle"
-"workshop/1978052734/de_mutiny"
-"workshop/1587622126/de_pyramid"
-"workshop/546623875/de_santorini"
-"workshop/1318698056/de_subzero"
 "workshop/862889198/de_westwood2"
-"workshop/1855652898/de_zenith"
-"workshop/389175812/de_zoo"
 "workshop/523638720/fy_simpsons"
-"workshop/832164297/de_prodigy_classic"
 )
 
 for i in ${!maps[@]}; do
@@ -128,7 +81,9 @@ if [ -n "$2" ]; then
   echo "Start map specified as input param"
 else
   #read -p "Choose the start map (type the number): "  startMap
-  startMap=0
+  $arrSize=${#arr[@]}-1
+  $randomMapIndex=$(($RANDOM % $arrSize))
+  startMap=$randomMapIndex
 fi
 
 
