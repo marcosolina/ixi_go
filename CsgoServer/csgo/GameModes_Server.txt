@@ -84,6 +84,12 @@
 				"workshop\1855652898\de_zenith"				""
 				"workshop\389175812\de_zoo"				""
 				"workshop\523638720\fy_simpsons"			""
+                "workshop\1268498604\fy_congreso"           ""
+                "workshop\193963906\fy_friction"            ""
+                "workshop\2233120335\fy_poolparty_tropic"   ""
+                "workshop\256816355\fy_desert"              ""
+                "workshop\1371513122\fy_snow"               ""
+                "workshop\2561630527\fy_poolday_mousquetaires ""
 			}
 		}
 		
@@ -155,6 +161,12 @@
 				"workshop\135827566\cs_estate"				""
 				"de_safehouse"						""
 				"de_shortdust"						""
+                "workshop\1268498604\fy_congreso"           ""
+                "workshop\193963906\fy_friction"            ""
+                "workshop\2233120335\fy_poolparty_tropic"   ""
+                "workshop\256816355\fy_desert"              ""
+                "workshop\1371513122\fy_snow"               ""
+                "workshop\2561630527\fy_poolday_mousquetaires ""
 				"de_shortnuke"						""
 				"workshop\273415773\cs_hijack"				""
 				"workshop\1958745897\de_marine"				""
@@ -231,6 +243,12 @@
 				"workshop\135827566\cs_estate"				""
 				"de_safehouse"						""
 				"de_shortdust"						""
+                "workshop\1268498604\fy_congreso"           ""
+                "workshop\193963906\fy_friction"            ""
+                "workshop\2233120335\fy_poolparty_tropic"   ""
+                "workshop\256816355\fy_desert"              ""
+                "workshop\1371513122\fy_snow"               ""
+                "workshop\2561630527\fy_poolday_mousquetaires ""
 				"de_shortnuke"						""
 				"workshop\273415773\cs_hijack"				""
 				"workshop\1958745897\de_marine"				""
@@ -254,6 +272,12 @@
 				"workshop\523638720\fy_simpsons"			""
 				"de_guard"						""
 				"cs_assault"						""
+                "workshop\1268498604\fy_congreso"           ""
+                "workshop\193963906\fy_friction"            ""
+                "workshop\2233120335\fy_poolparty_tropic"   ""
+                "workshop\256816355\fy_desert"              ""
+                "workshop\1371513122\fy_snow"               ""
+                "workshop\2561630527\fy_poolday_mousquetaires ""
 			}
 		}
 		
