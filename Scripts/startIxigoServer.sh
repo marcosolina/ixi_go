@@ -63,13 +63,6 @@ maps=(
 "de_lake"
 "de_safehouse"
 "de_stmarc"
-"workshop/135827566/cs_estate"
-"workshop/127012360/cs_museum"
-"workshop/1561348377/de_aztec"
-"workshop/1302060184/de_beerhouse"
-"workshop/1387732091/de_dst"
-"workshop/862889198/de_westwood2"
-"workshop/523638720/fy_simpsons"
 )
 
 for i in ${!maps[@]}; do
