@@ -264,6 +264,7 @@
 			{
 				"de_shortnuke"						""
 				"de_shortdust"						""
+				"de_shorttrain"						""
 				"workshop\129042069\cs_bank"				""
 				"de_lake"						""
 				"de_safehouse"						""
