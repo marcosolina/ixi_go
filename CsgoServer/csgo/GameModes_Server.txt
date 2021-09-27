@@ -98,6 +98,10 @@
 			"name"			"mg_all_maps"
 			"maps"
 			{
+				"cs_insertion2"						""
+				"de_basalt"						""
+				"de_extraction"						""
+				"de_ravine"						""
 				"ar_dizzy"						""
 				"workshop\1561348377\de_aztec"				""
 				"cs_italy"						""
@@ -180,6 +184,10 @@
 			"name"			"mg_ixico_maps"
 			"maps"
 			{
+				"cs_insertion2"						""
+				"de_basalt"						""
+				"de_extraction"						""
+				"de_ravine"						""
 				"de_pitstop"						""
 				"de_calavera"						""
 				"de_mocha"						""
