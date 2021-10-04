@@ -23,6 +23,7 @@ useradd -s /bin/bash -m -g $IXIGO_GROUP $IXIGO_USER_NAME
 
 #echo "Set a password for the user: $IXIGO_USER_NAME"
 passwd -d $IXIGO_USER_NAME
+echo "$IXIGO_USER_NAME:0123456789" | chpasswd
 passwd --expire $IXIGO_USER_NAME
 
 echo "$IXIGO_USER_NAME ALL = NOPASSWD: /sbin/shutdown"    | sudo tee -a /etc/sudoers
@@ -78,6 +79,7 @@ sed -i -e "s/SERVER_PASSWORD/$SERVER_PASSWORD/g" $CFG_FOLDER/server.cfg
 echo "Installing Steam CMD"
 $SCRIPTS_FOLDER/installSteam.sh
 
-echo "Login with username: $IXIGO_USER_NAME"
+echo "Login with username: $IXIGO_USER_NAME and password: 0123456789"
+echo ""
 
 chown $IXIGO_GROUP:$IXIGO_USER_NAME -R $INSTALL_PATH/ixi_go
