@@ -13,17 +13,18 @@ echo ""
 #read -p "Where do you want to install the server? (/full/path/): " INSTALL_PATH
 INSTALL_PATH="/home/ixigo"
 
+# Creating Ixigo Group and User
 IXIGO_GROUP=ixigo
+IXIGO_USER_NAME=ixigo
+IXIGO_USR_PASS=0123456789
 
 addgroup $IXIGO_GROUP
-
-#read -p "Ixigo User Name: " IXIGO_USER_NAME
-IXIGO_USER_NAME=ixigo
 useradd -s /bin/bash -m -g $IXIGO_GROUP $IXIGO_USER_NAME
-
-#echo "Set a password for the user: $IXIGO_USER_NAME"
 passwd -d $IXIGO_USER_NAME
-echo "$IXIGO_USER_NAME:0123456789" | chpasswd
+
+# Setting default user password and
+# forcing passowrd reset at first login
+echo "$IXIGO_USER_NAME:$IXIGO_USR_PASS" | chpasswd
 passwd --expire $IXIGO_USER_NAME
 
 echo "$IXIGO_USER_NAME ALL = NOPASSWD: /sbin/shutdown"    | sudo tee -a /etc/sudoers
@@ -79,7 +80,7 @@ sed -i -e "s/SERVER_PASSWORD/$SERVER_PASSWORD/g" $CFG_FOLDER/server.cfg
 echo "Installing Steam CMD"
 $SCRIPTS_FOLDER/installSteam.sh
 
-echo "Login with username: $IXIGO_USER_NAME and password: 0123456789"
+echo "Login with username: $IXIGO_USER_NAME and password: $IXIGO_USR_PASS"
 echo ""
 
 chown $IXIGO_GROUP:$IXIGO_USER_NAME -R $INSTALL_PATH/ixi_go
