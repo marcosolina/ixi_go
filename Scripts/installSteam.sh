@@ -23,8 +23,10 @@ then
   read -p "Type here your STEAM CSGO KEY: "                               STEAM_CSGO_KEY
   read -p "Type here your STEAM API KEY: "                                STEAM_API_KEY
   read -p "Type here your IxiGo Profile to user: "                        IXIGO_PROFILE
-  read -p "Type here the url of the IxiGo Eureka server (example: http://localhost:8765/ixigodiscovery/eureka): "   IXIGO_EUREKA_SERVER_URI
-  read -p "Type here the url of the IxiGo Config server (example: http://localhost:8888/config): "                  IXIGO_CONFIG_SRV_URI
+  #read -p "Type here the url of the IxiGo Eureka server (example: http://localhost:8765/ixigodiscovery/eureka): "   IXIGO_EUREKA_SERVER_URI
+  #read -p "Type here the url of the IxiGo Config server (example: http://localhost:8888/config): "                  IXIGO_CONFIG_SRV_URI
+  IXIGO_EUREKA_SERVER_URI="https://marco.selfip.net/ixigodiscovery/eureka"
+  IXIGO_CONFIG_SRV_URI="https://marco.selfip.net/config"
   read -p "Type here the username of the IxiGo Config server: "           IXIGO_CFG_SRV_USER
   read -p "Type here the password of the IxiGo Config server: "           IXIGO_CFG_SRV_PW
   read -p "Type here the Postgres username: "                             IXIGO_POSTGRES_USER
