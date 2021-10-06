@@ -32,10 +32,10 @@ bash <(curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts
 - Run the server in the background
   ~~~~bash
   # To start the serve in the background
-  screen -A -m -d -S <CHOOSE_A_NAME> -L /path/to/the/startAll.sh
+  screen -A -m -d -S ixigo -L /home/ixigo/ixi_go/Scripts/startAll.sh
   
   # To re-attach the process
-  screen -r <CHOOSE_A_NAME>
+  screen -r ixigo
   
   # To detach again after re-attaching
   ctrl+a and then press "d"
