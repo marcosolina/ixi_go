@@ -59,7 +59,6 @@ maps=(
 "de_ravine"
 "cs_militia"
 "de_bank"
-"de_guard"
 "de_lake"
 "de_safehouse"
 "de_stmarc"
