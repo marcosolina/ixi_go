@@ -4,6 +4,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 APP_FOLDER=$SCRIPT_DIR/
 
 APP_JAR_2=IxigoDiscordBot.jar
+APP_NOHUP_2=${APP_FOLDER}IxigoDiscordBot.log
 APP_PID_FILE_2=${APP_FOLDER}IxigoDiscordBot.pid
 
 export HOST_IP=$(hostname -I | awk '{print $1}')
