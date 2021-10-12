@@ -58,8 +58,9 @@ mvn clean package -f ./csgo_util/IxigoDiscordBot/pom.xml -P h2
 cd $INSTALL_PATH
 git clone https://github.com/marcosolina/ixi_go.git
 
-sed -i -e 's/\r$//' $JAR_FOLDER/*
-chmod +x $JAR_FOLDER/*
+TMP=$JAR_FOLDER/*
+sed -i -e 's/\r$//' $TMP
+chmod +x $TMP
 
 # Remove any "Windows" character and make
 # the scripts executable
