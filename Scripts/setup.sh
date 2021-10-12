@@ -59,13 +59,19 @@ cd $INSTALL_PATH
 git clone https://github.com/marcosolina/ixi_go.git
 
 TMP=$JAR_FOLDER/*
+echo "1"
 sed -i -e 's/\r$//' $TMP
+echo "2"
 chmod +x $TMP
+echo "3"
 
 # Remove any "Windows" character and make
 # the scripts executable
+echo "4"
 sed -i -e 's/\r$//' $SCRIPTS_FOLDER/*
+echo "5"
 chmod +x $SCRIPTS_FOLDER/*
+echo "6"
 
 mv /tmp/csgo_util/IxigoDiscordBot/target/IxigoDiscordBot*.jar $JAR_FOLDER/IxigoDiscordBot.jar
 mv /tmp/csgo_util/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar
