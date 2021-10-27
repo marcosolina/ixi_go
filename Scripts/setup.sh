@@ -32,6 +32,7 @@ then
 	passwd --expire $IXIGO_USER_NAME
   
 	echo "$IXIGO_USER_NAME ALL = NOPASSWD: /sbin/shutdown"    | sudo tee -a /etc/sudoers
+	echo "$IXIGO_USER_NAME ALL = NOPASSWD: /sbin/reboot"      | sudo tee -a /etc/sudoers
 	
 	read -p "Do you want to install the DynDns client? (y/n): " INSTALL_DYNDNS
 	if [ $INSTALL_DYNDNS = 'y' ]
