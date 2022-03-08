@@ -1,17 +1,27 @@
 // To use this file, rename it to GameModes_Server.txt
 //
 // Values here override the default gamemodes.txt 
-"GameModes_Server.txt"{
-	"gameTypes"{
-		"classic"{
-			"gameModes"{
+
+"GameModes_Server.txt"
+{
+	"gameTypes"
+	{
+		"classic"
+		{
+			"gameModes"
+			{
 				/////////////////////////////////////////
 				// COMPETITIVE
 				/////////////////////////////////////////
-				"competitive"{
+				"competitive"
+				{
 					"maxplayers"		"16"			// Note that maxplayers doesn't go in the convar block.
 														// Another way to set maxplayers is to add -maxplayers_override XX to the cmd line.
-
+					"exec"
+					{
+														// Any config files listed here will be executed after the ones in gamemodes.txt.
+						
+					}
 					"mapgroupsMP"						// List of mapgroups valid for this game mode ( competitive )
 					{
 						"mg_ixico_maps"				""
@@ -21,10 +31,90 @@
 						"mg_classic_maps"			""
 					}
 				}
+				/////////////////////////////////////////
+				// CASUAL
+				/////////////////////////////////////////
+				"casual"
+				{
+					"maxplayers"		"30"
+					"exec"
+					{
+						"exec"					"server_last.cfg"
+					}
+					"mapgroupsMP"						// List of mapgroups valid for this game mode ( casual )
+					{
+						"mg_bomb_se"		""
+					}
+				}
+			}
+		}
+		"gungame"
+		{
+			"gameModes"
+			{
+				/////////////////////////////////////////
+				// ARMS RACE
+				/////////////////////////////////////////
+				"gungameprogressive"
+				{
+					"maxplayers"			"10"
+					// These are the configs that get executed when a game mode of this type is created
+					"exec"
+					{
+						"exec"					"server_last.cfg"
+					}
+					"mapgroupsMP"
+					{
+						"mg_armsrace"	""
+					}
+					"weaponprogression_ct"
+					{
+						"deagle"		{ "kills"	"5" }
+						"awp"			{ "kills"	"5" }
+						"knifegg"		{ "kills"	"1" }
+					}
+					"weaponprogression_t"
+					{
+						"deagle"		{ "kills"	"5" }
+						"awp"			{ "kills"	"5" }
+						"knifegg"		{ "kills"	"1" }
+					}
+				}
+				/////////////////////////////////////////
+				// DEMOLITION
+				/////////////////////////////////////////
+				"gungametrbomb"
+				{
+					"maxplayers"			"10"
+					// These are the configs that get executed when a game mode of this type is created
+					"exec"
+					{
+						"exec"					"server_last.cfg"
+					}
+					"mapgroupsMP"
+					{
+						"mg_demolition"		""
+					}
+
+					"weaponprogression_ct"
+					{
+						"m4a1"			{ "kills"	"1" }
+						"awp"			{ "kills"	"1" }
+						"Scar20"		{ "kills"	"1" }
+					}
+						
+					"weaponprogression_t"
+					{
+						"ak47"			{ "kills"	"1" }
+						"awp"			{ "kills"	"1" }
+						"g3sg1"			{ "kills"	"1" }
+					}
+				}
 			}
 		}
 	}
-	//////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 // Map groups
 //
 // To use a mapgroup, it needs to be defined in a keyvalues
