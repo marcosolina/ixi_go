@@ -55,9 +55,8 @@ echo ""
 # Use a small map while we wait for everybody to join
 maps=(
 "ar_dizzy"
-"de_extraction"
-"de_ravine"
 "cs_militia"
+"de_hive"
 "de_bank"
 "de_lake"
 "de_safehouse"
