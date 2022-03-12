@@ -103,7 +103,6 @@
 			{
 				"cs_insertion2"						""
 				"de_basalt"						""
-				"de_extraction"						""
 				"ar_dizzy"						""
 				"workshop\1561348377\de_aztec"				""
 				"cs_italy"						""
@@ -190,7 +189,6 @@
 			{
 				"cs_insertion2"						""
 				"de_basalt"						""
-				"de_extraction"						""
 				"workshop\1490155704\de_pitstop"			""
 				"workshop\2242472711\de_calavera"			""
 				"de_mocha"						""
