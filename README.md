@@ -10,7 +10,7 @@ This repository contains the scripts used to setup and run a dedicated CSGO serv
 - CPU: Intel Core Duo E6600 (2-2.8GHz+) or AMD Phenom X3 8750+
 - RAM: 2GB+
 - HDD: 40GB+
-- [Steam Game Server Login Token (GSLT)](https://developer.valvesoftware.com/wiki/Counter-Strike:_Global_Offensive_Dedicated_Servers)
+- [Steam Game Server Login Token (GSLT)](https://steamcommunity.com/dev/managegameservers)
 - [Steam Web API Key](https://developer.valvesoftware.com/wiki/CSGO_Workshop_For_Server_Operators)
 - [IxiGo Utils](https://github.com/marcosolina/csgo_util)
 
