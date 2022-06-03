@@ -11,7 +11,7 @@ This repository contains the scripts used to setup and run a dedicated CSGO serv
 - RAM: 2GB+
 - HDD: 40GB+
 - [Steam Game Server Login Token (GSLT)](https://steamcommunity.com/dev/managegameservers)
-- [Steam Web API Key](https://developer.valvesoftware.com/wiki/CSGO_Workshop_For_Server_Operators)
+- [Steam Web API Key](https://steamcommunity.com/dev/apikey)
 - [IxiGo Utils](https://github.com/marcosolina/csgo_util)
 
 ## Donwload & Install
