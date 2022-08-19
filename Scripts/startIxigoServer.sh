@@ -56,7 +56,6 @@ echo ""
 maps=(
 "ar_dizzy"
 "cs_militia"
-"de_hive"
 "de_bank"
 "de_lake"
 "de_safehouse"
