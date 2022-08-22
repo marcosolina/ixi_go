@@ -27,11 +27,8 @@ echo ""
 echo ""
 
 mapsGroup=(
-  "mg_ixico_maps"
-  "mg_workshop_maps"
   "mg_all_maps"
   "mg_short_maps"
-  "mg_classic_maps"
 )
 
 for i in ${!mapsGroup[@]}; do
@@ -60,6 +57,8 @@ maps=(
 "de_lake"
 "de_safehouse"
 "de_stmarc"
+"de_prime"
+"de_blagai"
 )
 
 for i in ${!maps[@]}; do
