@@ -96,6 +96,7 @@
 				"de_mirage"						""
 				"workshop\832164297\de_prodigy_classic"			""
 				"de_nuke"						""
+				"workshop\1822212825\gd_rialto_night"			""
 				"workshop\2105680462\de_firenze"			""
 				"workshop\2238701164\cs_extraction"			""
 				"de_overpass"						""
