@@ -16,6 +16,7 @@
 					{
   						"mg_all_maps"				""
 						"mg_short_maps"				""
+						"mg_halloween"				""
 					}
 				}
 			}
@@ -154,6 +155,19 @@
                 		"workshop\256816355\fy_desert"              		""
                 		"workshop\1371513122\fy_snow"               		""
                 		"workshop\2561630527\fy_poolday_mousquetaires		""
+			}
+		}
+		"mg_halloween"
+		{
+			"name"			"mg_halloween"
+			"maps"
+			{
+				"workshop\786463068\dust2_halloweenlastversion"				""
+				"workshop\1197291778\de_fright"				""
+				"workshop\2880562882\de_mirage_halloween_v2"				""
+				"workshop\1896194449\de_nuke_halloween"				""
+				"workshop\1580531507\de_cbble"				""
+				"workshop\2880109111\aim_mc_hw"				""
 			}
 		}
 	}
