@@ -42,3 +42,4 @@ bash <(curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts
   ~~~~
 
 - [\[CS:GO\] Fix Competitive Warmup](https://forums.alliedmods.net/showthread.php?t=329053)
+- [GAmesModes_Server.txt generator](https://beta.configcreator.com/create/csgo/gamemodes_server.txt)
