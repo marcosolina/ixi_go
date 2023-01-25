@@ -43,3 +43,6 @@ bash <(curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts
 
 - [\[CS:GO\] Fix Competitive Warmup](https://forums.alliedmods.net/showthread.php?t=329053)
 - [GAmesModes_Server.txt generator](https://beta.configcreator.com/create/csgo/gamemodes_server.txt)
+- Key binding:
+  - [Ping](https://steamcommunity.com/app/730/discussions/0/3112518479597019657/)
+  - [autoexec](https://prosettings.net/blog/how-to-use-a-csgo-config-create-an-autoexec/)
