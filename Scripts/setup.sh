@@ -61,7 +61,7 @@ mvn clean package -f ./csgo_util/IxigoDiscordBot/pom.xml -P h2
 
 
 cd $INSTALL_PATH
-git clone --branch refactoring https://github.com/marcosolina/ixi_go.git
+git clone https://github.com/marcosolina/ixi_go.git
 
 # Are we in a metamod container and is the metamod folder missing?
 if  [ ! -z "$ENV_METAMOD_VERSION" ] && [ ! -d "${CSGO_DIR}/addons/metamod" ]; then
