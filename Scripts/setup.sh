@@ -82,7 +82,7 @@ chmod +x $JAR_FOLDER/*
 # Remove any "Windows" character and make
 # the scripts executable
 sed -i -e 's/\r$//' $SCRIPTS_FOLDER/*
-chmod +x $SCRIPTS_FOLDER/*
+chmod +x $SCRIPTS_FOLDER/*.sh
 
 mv /tmp/csgo_util/IxigoDiscordBot/target/IxigoDiscordBot*.jar $JAR_FOLDER/IxigoDiscordBot.jar
 mv /tmp/csgo_util/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar
