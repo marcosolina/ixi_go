@@ -83,7 +83,7 @@ echo ""
 
 HOST_IP=$(hostname -I | awk '{print $1}')
 
-steamcmd +login anonymous +force_install_dir $ENV_CSGO_INSTALL_FOLDER +app_update 740 +quit
+steamcmd +force_install_dir $ENV_CSGO_INSTALL_FOLDER +login anonymous +app_update 740 +quit
 $ENV_CSGO_INSTALL_FOLDER/srcds_run -game csgo -console -usercon -port 27015 +ip $HOST_IP +game_type 0 +game_mode 1 +mapgroup $MAP_GROUP +map $MAP_START -authkey $ENV_STEAM_API_KEY +sv_setsteamaccount $ENV_STEAM_CSGO_KEY -net_port_try 1
 
 echo "End"

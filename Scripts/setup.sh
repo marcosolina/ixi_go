@@ -14,8 +14,12 @@ IXIGO_GROUP=ixigo
 IXIGO_USER_NAME=ixigo
 IXIGO_USR_PASS=0123456789
 
+ENV_METAMOD_VERSION=1.12
+ENV_SOURCEMOD_VERSION=1.12
+
 SCRIPTS_FOLDER=$INSTALL_PATH/ixi_go/Scripts
 JAR_FOLDER=$INSTALL_PATH/ixi_go/Scripts/jars
+CSGO_DIR=$INSTALL_PATH/ixi_go/CsgoServer/csgo
 CFG_FOLDER=$INSTALL_PATH/ixi_go/CsgoServer/csgo/cfg
 
 read -p "Is this a clean install? (y/n): " cleanInstall
@@ -57,7 +61,20 @@ mvn clean package -f ./csgo_util/IxigoDiscordBot/pom.xml -P h2
 
 
 cd $INSTALL_PATH
-git clone https://github.com/marcosolina/ixi_go.git
+git clone --branch refactoring https://github.com/marcosolina/ixi_go.git
+
+# Are we in a metamod container and is the metamod folder missing?
+if  [ ! -z "$ENV_METAMOD_VERSION" ] && [ ! -d "${CSGO_DIR}/addons/metamod" ]; then
+	LATESTMM=$(wget -qO- https://mms.alliedmods.net/mmsdrop/"${ENV_METAMOD_VERSION}"/mmsource-latest-linux)
+	wget -qO- https://mms.alliedmods.net/mmsdrop/"${ENV_METAMOD_VERSION}"/"${LATESTMM}" | tar xvzf - -C "${CSGO_DIR}"	
+fi
+
+# Are we in a sourcemod container and is the sourcemod folder missing?
+if  [ ! -z "$ENV_SOURCEMOD_VERSION" ] && [ ! -d "${CSGO_DIR}/addons/sourcemod" ]; then
+	LATESTSM=$(wget -qO- https://sm.alliedmods.net/smdrop/"${ENV_SOURCEMOD_VERSION}"/sourcemod-latest-linux)
+	wget -qO- https://sm.alliedmods.net/smdrop/"${ENV_SOURCEMOD_VERSION}"/"${LATESTSM}" | tar xvzf - -C "${CSGO_DIR}"
+	cp -r $SCRIPTS_FOLDER/csgo/addons/sourcemod/plugins/* ${CSGO_DIR}/addons/sourcemod/plugins
+fi
 
 sed -i -e 's/\r$//' $JAR_FOLDER/*
 chmod +x $JAR_FOLDER/*
