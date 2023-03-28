@@ -52,16 +52,26 @@ fi
 
 # Prepare the Jars
 cd /tmp
-git clone https://github.com/marcosolina/csgo_util.git
-git clone https://github.com/marcosolina/javautils.git
+git clone --branch refactoring https://github.com/marcosolina/csgo_util.git
 
-mvn clean install -f /tmp/javautils/Utils/pom.xml
-mvn clean package -f ./csgo_util/IxigoServerHelper/pom.xml
-mvn clean package -f ./csgo_util/IxigoDiscordBot/pom.xml -P h2
+WORKSPACE_FOLDER=/tmp/csgo_util
+
+mvn clean install -f $WORKSPACE_FOLDER/IxigoLibrary/pom.xml
+mvn clean install -f $WORKSPACE_FOLDER/IxigoParent/pom.xml
+mvn clean install -f $WORKSPACE_FOLDER/IxigoDemManagerContract/pom.xml
+mvn clean install -f $WORKSPACE_FOLDER/IxigoDiscordBotContract/pom.xml
+mvn clean install -f $WORKSPACE_FOLDER/IxigoEventDispatcherContract/pom.xml
+mvn clean install -f $WORKSPACE_FOLDER/IxigoPlayersManagerContract/pom.xml
+mvn clean install -f $WORKSPACE_FOLDER/IxigoRconApiContract/pom.xml
+mvn clean install -f $WORKSPACE_FOLDER/IxigoServerHelperContract/pom.xml
+mvn clean package -f $WORKSPACE_FOLDER/IxigoServerHelper/pom.xml
+
+
+#mvn clean package -f ./csgo_util/IxigoDiscordBot/pom.xml -P h2
 
 
 cd $INSTALL_PATH
-git clone https://github.com/marcosolina/ixi_go.git
+git clone --branch refactoring https://github.com/marcosolina/ixi_go.git
 
 # Are we in a metamod container and is the metamod folder missing?
 if  [ ! -z "$ENV_METAMOD_VERSION" ] && [ ! -d "${CSGO_DIR}/addons/metamod" ]; then
@@ -73,6 +83,7 @@ fi
 if  [ ! -z "$ENV_SOURCEMOD_VERSION" ] && [ ! -d "${CSGO_DIR}/addons/sourcemod" ]; then
 	LATESTSM=$(wget -qO- https://sm.alliedmods.net/smdrop/"${ENV_SOURCEMOD_VERSION}"/sourcemod-latest-linux)
 	wget -qO- https://sm.alliedmods.net/smdrop/"${ENV_SOURCEMOD_VERSION}"/"${LATESTSM}" | tar xvzf - -C "${CSGO_DIR}"
+	# Copy my plugins
 	cp -r $SCRIPTS_FOLDER/csgo/addons/sourcemod/plugins/* ${CSGO_DIR}/addons/sourcemod/plugins
 fi
 
@@ -84,11 +95,9 @@ chmod +x $JAR_FOLDER/*
 sed -i -e 's/\r$//' $SCRIPTS_FOLDER/*.sh
 chmod +x $SCRIPTS_FOLDER/*
 
-mv /tmp/csgo_util/IxigoDiscordBot/target/IxigoDiscordBot*.jar $JAR_FOLDER/IxigoDiscordBot.jar
-mv /tmp/csgo_util/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar
+mv $WORKSPACE_FOLDER/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar
 
 rm -rf /root/.m2/*
-
 
 if [ $cleanInstall = 'y' ]
 then

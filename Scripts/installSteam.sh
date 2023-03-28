@@ -23,14 +23,12 @@ then
   read -p "Type here your STEAM CSGO KEY: "                               STEAM_CSGO_KEY
   read -p "Type here your STEAM API KEY: "                                STEAM_API_KEY
   read -p "Type here your IxiGo Profile to user: "                        IXIGO_PROFILE
-  #read -p "Type here the url of the IxiGo Eureka server (example: http://localhost:8765/ixigodiscovery/eureka): "   IXIGO_EUREKA_SERVER_URI
+  read -p "Type here the url of the IxiGo Eureka server (example: http://localhost:8765/ixigodiscovery/eureka): "   IXIGO_EUREKA_SERVER
   #read -p "Type here the url of the IxiGo Config server (example: http://localhost:8888/config): "                  IXIGO_CONFIG_SRV_URI
-  IXIGO_EUREKA_SERVER_URI="https://marco.selfip.net/ixigodiscovery/eureka"
+  #IXIGO_EUREKA_SERVER="https://marco.selfip.net/ixigodiscovery/eureka"
   IXIGO_CONFIG_SRV_URI="https://marco.selfip.net/config"
   read -p "Type here the username of the IxiGo Config server: "           IXIGO_CFG_SRV_USER
   read -p "Type here the password of the IxiGo Config server: "           IXIGO_CFG_SRV_PW
-  read -p "Type here the Postgres username: "                             IXIGO_POSTGRES_USER
-  read -p "Type here the Postgres password: "                             IXIGO_POSTGRES_PASSW
 
   CSGO_INSTALL_FOLDER=$(dirname $(dirname $(readlink -f "$0")))/CsgoServer
 
@@ -39,12 +37,10 @@ then
   echo "export ENV_STEAM_API_KEY=$STEAM_API_KEY"              | sudo tee -a /etc/profile
   echo "export ENV_CSGO_INSTALL_FOLDER=$CSGO_INSTALL_FOLDER"  | sudo tee -a /etc/profile
   echo "export IXIGO_PROFILE=$IXIGO_PROFILE"                  | sudo tee -a /etc/profile
-  echo "export IXIGO_EUREKA_SERVER=$IXIGO_EUREKA_SERVER_URI"  | sudo tee -a /etc/profile
+  echo "export IXIGO_EUREKA_SERVER=$IXIGO_EUREKA_SERVER"      | sudo tee -a /etc/profile
   echo "export IXIGO_CONFIG_SERVER_URI=$IXIGO_CONFIG_SRV_URI" | sudo tee -a /etc/profile
   echo "export IXIGO_CONFIG_SERVER_USER=$IXIGO_CFG_SRV_USER"  | sudo tee -a /etc/profile
   echo "export IXIGO_CONFIG_SERVER_PASSW=$IXIGO_CFG_SRV_PW"   | sudo tee -a /etc/profile
-  echo "export IXIGO_POSTGRES_USER=$IXIGO_POSTGRES_USER"      | sudo tee -a /etc/profile
-  echo "export IXIGO_POSTGRES_PASSW=$IXIGO_POSTGRES_PASSW"    | sudo tee -a /etc/profile
 
 fi
 

@@ -5,7 +5,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 # Start the Helper Service and the
 # IxiGo game server
 $SCRIPT_DIR/jars/startHelper.sh start
-$SCRIPT_DIR/jars/startDiscordBot.sh start
+#$SCRIPT_DIR/jars/startDiscordBot.sh start
 $SCRIPT_DIR/startIxigoServer.sh
 
 # Send the shtdown event.
