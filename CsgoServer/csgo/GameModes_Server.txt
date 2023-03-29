@@ -14,7 +14,7 @@
 
 					"mapgroupsMP"						// List of mapgroups valid for this game mode ( competitive )
 					{
-  						"mg_all_maps"				""
+						"mg_all_maps"				""
 						"mg_short_maps"				""
 						"mg_halloween"				""
 					}
@@ -22,7 +22,7 @@
 			}
 		}
 	}
-	//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
 // Map groups
 //
 // To use a mapgroup, it needs to be defined in a keyvalues

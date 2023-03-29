@@ -52,7 +52,7 @@ fi
 
 # Prepare the Jars
 cd /tmp
-git clone --branch refactoring https://github.com/marcosolina/csgo_util.git
+git clone --branch main https://github.com/marcosolina/csgo_util.git
 
 WORKSPACE_FOLDER=/tmp/csgo_util
 
@@ -71,7 +71,7 @@ mvn clean package -f $WORKSPACE_FOLDER/IxigoServerHelper/pom.xml
 
 
 cd $INSTALL_PATH
-git clone --branch refactoring https://github.com/marcosolina/ixi_go.git
+git clone --branch main https://github.com/marcosolina/ixi_go.git
 
 # Are we in a metamod container and is the metamod folder missing?
 if  [ ! -z "$ENV_METAMOD_VERSION" ] && [ ! -d "${CSGO_DIR}/addons/metamod" ]; then
