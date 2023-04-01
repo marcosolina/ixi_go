@@ -12,7 +12,7 @@ $SCRIPT_DIR/startIxigoServer.sh
 # This will tell to the Helper service
 # that he can copy the last DEM file
 # On the dem parser Rasp
-curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"eventName\": \"shutdown\"}"
+curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"shutdown\"}"
 
 # Give to the service some time to
 # process the last DEM file
