@@ -2,26 +2,26 @@
 //
 // Values here override the default gamemodes.txt 
 "GameModes_Server.txt"{
-	"gameTypes"{
-		"classic"{
-			"gameModes"{
-				/////////////////////////////////////////
-				// COMPETITIVE
-				/////////////////////////////////////////
-				"competitive"{
-					"maxplayers"		"16"			// Note that maxplayers doesn't go in the convar block.
-														// Another way to set maxplayers is to add -maxplayers_override XX to the cmd line.
+    "gameTypes"{
+        "classic"{
+            "gameModes"{
+                /////////////////////////////////////////
+                // COMPETITIVE
+                /////////////////////////////////////////
+                "competitive"{
+                    "maxplayers"                    "16" // Note that maxplayers doesn't go in the convar block.
+                                                         // Another way to set maxplayers is to add -maxplayers_override XX to the cmd line.
 
-					"mapgroupsMP"						// List of mapgroups valid for this game mode ( competitive )
-					{
-						"mg_all_maps"				""
-						"mg_short_maps"				""
-						"mg_halloween"				""
-					}
-				}
-			}
-		}
-	}
+                    "mapgroupsMP"                        // List of mapgroups valid for this game mode ( competitive )
+                    {
+                        "mg_all_maps"                ""
+                        "mg_short_maps"              ""
+                        "mg_halloween"               ""
+                    }
+                }
+            }
+        }
+    }
 //////////////////////////////////////////////////////////////////////////////////////////////
 // Map groups
 //
@@ -42,136 +42,136 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 
-	"mapgroups"
-	{	
-		"mg_all_maps"									// mapgroup definition
-		{
-			"name"			"mg_all_maps"
-			"maps"
-			{
-				"cs_insertion2"									""
-				"de_basalt"										""
-				"ar_dizzy"										""
-				"workshop\1561348377\de_aztec"					""
-				"cs_italy"										""
-				"ar_lunacy"										""
-				"cs_agency"										""
-				"workshop\221603249\de_marquis"					""
-				"workshop\2064064363\de_miracle"				""
-				"cs_militia"									""
-				"cs_office"										""
-				"de_ancient"									""
-				"workshop\1978052734\de_mutiny"					""
-				"workshop\1587622126\de_pyramid"				""
-				"workshop\546623875\de_santorini"				""
-				"workshop\1318698056\de_subzero"				""
-				"workshop\862889198\de_westwood2"				""
-				"workshop\1855652898\de_zenith"					""
-				"de_bank"										""
-				"cs_assault"									""
-				"workshop\206678373\cs_valley"					""
-				"workshop\600728667\de_aqueduct"				""
-				"workshop\320674385\de_arcade_v2"				""
-				"de_cache"										""
-				"de_canals"										""
-				"workshop\2916938982\de_nuketec"				""
-				"de_boyard"										""
-				"de_chalice"									""
-				"de_cbble"										""
-				"workshop\2257823084\de_ravine"					""
-				"de_dust2"										""
-				"de_inferno"									""
-				"workshop\127012360\cs_museum"					""
-				"workshop\1302060184\de_beerhouse"				""
-				"ar_shoots"										""
-				"workshop\529733812\de_blast_beta02"			""
-				"workshop\2011784264\de_blossom"				""
-				"de_elysion"									""
-				"workshop\2240874700\de_guard"					""
-				"workshop\874801875\de_Codewise2"				""
-				"workshop\1490155704\de_pitstop"				""
-				"workshop\2242472711\de_calavera"				""
-				"de_mocha"										""
-				"de_grind"										""
-				"workshop\2175304484\de_engage"					""
-				"workshop\401145257\de_fire"					""
-				"de_lake"										""
-				"de_mirage"										""
-				"workshop\832164297\de_prodigy_classic"			""
-				"de_nuke"										""
-				"workshop\1822212825\gd_rialto_night"			""
-				"workshop\2105680462\de_firenze"				""
-				"workshop\2238701164\cs_extraction"				""
-				"de_overpass"									""
-				"de_stmarc"										""
-				"workshop\215971897\de_coldwater"				""
-				"workshop\1414531578\de_cornerwork"				""
-				"workshop\1387732091\de_dst"					""
-				"workshop\239672577\de_crown"					""
-				"de_sugarcane"									""
-				"de_train"										""
-				"workshop\125786610\cs_backalley"				""
-				"workshop\129042069\cs_bank"					""
-				"workshop\600914785\cs_cruise"					""
-				"de_vertigo"									""
-				"ar_baggage"									""
-				"workshop\135827566\cs_estate"					""
-				"de_safehouse"									""
-				"de_shortdust"									""
-				"workshop\1268498604\fy_congreso"				""
-				"workshop\193963906\fy_friction"				""
-				"workshop\2233120335\fy_poolparty_tropic"		""
-				"workshop\256816355\fy_desert"					""
-				"workshop\1371513122\fy_snow"					""
-				"workshop\2877646712\de_cascade"				""
-				"workshop\1258599704\de_breach"					""
-				"workshop\2561630527\fy_poolday_mousquetaires"	""
-				"de_shortnuke"									""
-				"workshop\2901474354\de_blagai"					""
-				"workshop\273415773\cs_hijack"					""
-				"workshop\1958745897\de_marine"					""
-				"workshop\389175812\de_zoo"						""
-				"workshop\523638720\fy_simpsons"				""
-			}
-		}
-		
-		"mg_short_maps"									// mapgroup definition
-		{
-			"name"			"mg_short_maps"
-			"maps"
-			{
-				"de_shortnuke"									""
-				"de_shortdust"									""
-				"de_shorttrain"									""
-				"workshop\129042069\cs_bank"					""
-				"de_lake"										""
-				"de_safehouse"									""
-				"workshop\2877646712\de_cascade"				""
-				"workshop\2901474354\de_blagai"					""
-				"de_stmarc"										""
-				"workshop\523638720\fy_simpsons"				""
-				"workshop\2240874700\de_guard"					""
-				"cs_assault"									""
-				"workshop\1268498604\fy_congreso"				""
-				"workshop\193963906\fy_friction"				""
-				"workshop\2233120335\fy_poolparty_tropic"		""
-				"workshop\256816355\fy_desert"					""
-				"workshop\1371513122\fy_snow"					""
-				"workshop\2561630527\fy_poolday_mousquetaires"	""
-			}
-		}
-		"mg_halloween"
-		{
-			"name"			"mg_halloween"
-			"maps"
-			{
-				"workshop\786463068\dust2_halloweenlastversion"		""
-				"workshop\1197291778\de_fright"						""
-				"workshop\2880562882\de_mirage_halloween_v2"		""
-				"workshop\1896194449\de_nuke_halloween"				""
-				"workshop\1580531507\de_cbble"						""
-				"workshop\2880109111\aim_mc_hw"						""
-			}
-		}
-	}
+    "mapgroups"
+    {    
+        "mg_all_maps"                                    // mapgroup definition
+        {
+            "name"            "mg_all_maps"
+            "maps"
+            {
+                "cs_insertion2"                                ""
+                "de_basalt"                                    ""
+                "ar_dizzy"                                     ""
+                "workshop\1561348377\de_aztec"                 ""
+                "cs_italy"                                     ""
+                "ar_lunacy"                                    ""
+                "cs_agency"                                    ""
+                "workshop\221603249\de_marquis"                ""
+                "workshop\2064064363\de_miracle"               ""
+                "cs_militia"                                   ""
+                "cs_office"                                    ""
+                "de_ancient"                                   ""
+                "workshop\1978052734\de_mutiny"                ""
+                "workshop\1587622126\de_pyramid"               ""
+                "workshop\546623875\de_santorini"              ""
+                "workshop\1318698056\de_subzero"               ""
+                "workshop\862889198\de_westwood2"              ""
+                "workshop\1855652898\de_zenith"                ""
+                "de_bank"                                      ""
+                "cs_assault"                                   ""
+                "workshop\206678373\cs_valley"                 ""
+                "workshop\600728667\de_aqueduct"               ""
+                "workshop\320674385\de_arcade_v2"              ""
+                "de_cache"                                     ""
+                "de_canals"                                    ""
+                "workshop\2916938982\de_nuketec"               ""
+                "de_boyard"                                    ""
+                "de_chalice"                                   ""
+                "de_cbble"                                     ""
+                "workshop\2257823084\de_ravine"                ""
+                "de_dust2"                                     ""
+                "de_inferno"                                   ""
+                "workshop\127012360\cs_museum"                 ""
+                "workshop\1302060184\de_beerhouse"             ""
+                "ar_shoots"                                    ""
+                "workshop\529733812\de_blast_beta02"           ""
+                "workshop\2011784264\de_blossom"               ""
+                "de_elysion"                                   ""
+                "workshop\2240874700\de_guard"                 ""
+                "workshop\874801875\de_Codewise2"              ""
+                "workshop\1490155704\de_pitstop"               ""
+                "workshop\2242472711\de_calavera"              ""
+                "de_mocha"                                     ""
+                "de_grind"                                     ""
+                "workshop\2175304484\de_engage"                ""
+                "workshop\401145257\de_fire"                   ""
+                "de_lake"                                      ""
+                "de_mirage"                                    ""
+                "workshop\832164297\de_prodigy_classic"        ""
+                "de_nuke"                                      ""
+                "workshop\1822212825\gd_rialto_night"          ""
+                "workshop\2105680462\de_firenze"               ""
+                "workshop\2238701164\cs_extraction"            ""
+                "de_overpass"                                  ""
+                "de_stmarc"                                    ""
+                "workshop\215971897\de_coldwater"              ""
+                "workshop\1414531578\de_cornerwork"            ""
+                "workshop\1387732091\de_dst"                   ""
+                "workshop\239672577\de_crown"                  ""
+                "de_sugarcane"                                 ""
+                "de_train"                                     ""
+                "workshop\125786610\cs_backalley"              ""
+                "workshop\129042069\cs_bank"                   ""
+                "workshop\600914785\cs_cruise"                 ""
+                "de_vertigo"                                   ""
+                "ar_baggage"                                   ""
+                "workshop\135827566\cs_estate"                 ""
+                "de_safehouse"                                 ""
+                "de_shortdust"                                 ""
+                "workshop\1268498604\fy_congreso"              ""
+                "workshop\193963906\fy_friction"               ""
+                "workshop\2233120335\fy_poolparty_tropic"      ""
+                "workshop\256816355\fy_desert"                 ""
+                "workshop\1371513122\fy_snow"                  ""
+                "workshop\2877646712\de_cascade"               ""
+                "workshop\1258599704\de_breach"                ""
+                "workshop\2561630527\fy_poolday_mousquetaires" ""
+                "de_shortnuke"                                 ""
+                "workshop\2901474354\de_blagai"                ""
+                "workshop\273415773\cs_hijack"                 ""
+                "workshop\1958745897\de_marine"                ""
+                "workshop\389175812\de_zoo"                    ""
+                "workshop\523638720\fy_simpsons"               ""
+            }
+        }
+        
+        "mg_short_maps"                                    // mapgroup definition
+        {
+            "name"            "mg_short_maps"
+            "maps"
+            {
+                "de_shortnuke"                                  ""
+                "de_shortdust"                                  ""
+                "de_shorttrain"                                 ""
+                "workshop\129042069\cs_bank"                    ""
+                "de_lake"                                       ""
+                "de_safehouse"                                  ""
+                "workshop\2877646712\de_cascade"                ""
+                "workshop\2901474354\de_blagai"                 ""
+                "de_stmarc"                                     ""
+                "workshop\523638720\fy_simpsons"                ""
+                "workshop\2240874700\de_guard"                  ""
+                "cs_assault"                                    ""
+                "workshop\1268498604\fy_congreso"               ""
+                "workshop\193963906\fy_friction"                ""
+                "workshop\2233120335\fy_poolparty_tropic"       ""
+                "workshop\256816355\fy_desert"                  ""
+                "workshop\1371513122\fy_snow"                   ""
+                "workshop\2561630527\fy_poolday_mousquetaires"  ""
+            }
+        }
+        "mg_halloween"
+        {
+            "name"            "mg_halloween"
+            "maps"
+            {
+                "workshop\786463068\dust2_halloweenlastversion" ""
+                "workshop\1197291778\de_fright"                 ""
+                "workshop\2880562882\de_mirage_halloween_v2"    ""
+                "workshop\1896194449\de_nuke_halloween"         ""
+                "workshop\1580531507\de_cbble"                  ""
+                "workshop\2880109111\aim_mc_hw"                 ""
+            }
+        }
+    }
 }
