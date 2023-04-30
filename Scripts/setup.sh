@@ -84,6 +84,7 @@ if  [ ! -z "$ENV_SOURCEMOD_VERSION" ] && [ ! -d "${CSGO_DIR}/addons/sourcemod" ]
 	LATESTSM=$(wget -qO- https://sm.alliedmods.net/smdrop/"${ENV_SOURCEMOD_VERSION}"/sourcemod-latest-linux)
 	wget -qO- https://sm.alliedmods.net/smdrop/"${ENV_SOURCEMOD_VERSION}"/"${LATESTSM}" | tar xvzf - -C "${CSGO_DIR}"
 	# Copy my plugins
+	rm -rf ${CSGO_DIR}/addons/sourcemod/plugins/*
 	cp -r $SCRIPTS_FOLDER/csgo/addons/sourcemod/plugins/* ${CSGO_DIR}/addons/sourcemod/plugins
 fi
 
