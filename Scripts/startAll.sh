@@ -23,4 +23,4 @@ sleep 60
 $SCRIPT_DIR/jars/startHelper.sh stop
 $SCRIPT_DIR/jars/startDiscordBot.sh stop
 
-sudo shutdown now
+#sudo shutdown now
