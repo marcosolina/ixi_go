@@ -31,6 +31,32 @@ bash <(curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts
   sed -i -e 's/\r$//' <script_name>
   ```
 
+- Generate SSH keys
+
+  - Windows:
+
+    ```bash
+     # Open the command prompt, type the following command, and press Enter:
+     ssh-keygen
+
+     # Press the Enter key to accept the default values.
+     # The ssh-keygen command generates a public/private key pair.
+
+     # The keys are stored in the %USERPROFILE%\.ssh directory.
+    ```
+
+  - Linux:
+
+    ```bash
+    # Open a terminal and type the following command:
+    ssh-keygen
+
+    # Press the Enter key to accept the default values.
+    # The ssh-keygen command generates a public/private key pair.
+
+    # The keys are stored in the ~/.ssh directory.
+    ```
+
 - Run the server in the background
 
   ```bash
