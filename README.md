@@ -88,8 +88,8 @@ bash <(curl -L https://raw.githubusercontent.com/marcosolina/ixi_go/main/Scripts
   host_workshop_map 3070612859    shortdust
   host_workshop_map 3121051997	  ravine CS2
   host_workshop_map 3127729110	  Dust
-  host_workshop_map 3121217565	  Thera
-  host_workshop_map 3132854332	  Foroglio
+  host_workshop_map 3121217565	Thera
+  host_workshop_map 3132854332	Foroglio
 
 
   they are saved in the folder game/bin/linuxsteamrt64/steamapps/workshop/content/730
