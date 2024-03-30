@@ -55,23 +55,7 @@ $CS2_DIR/game/bin/linuxsteamrt64/cs2 -dedicated \
         +mp_maxrounds 15 \
         +mp_free_armor 2 \
         +sv_setsteamaccount $ENV_STEAM_CSGO_KEY \
-        +host_workshop_map 3071005299 \
-        +host_workshop_map 3070290240 \
-        +host_workshop_map 3070766070 \
-        +host_workshop_map 3071899764 \
-        +host_workshop_map 3075706807 \
-        +host_workshop_map 3079872050 \
-        +host_workshop_map 3085200029 \
-        +host_workshop_map 3084661017 \
-        +host_workshop_map 3077752384 \
-        +host_workshop_map 3100864853 \
-        +host_workshop_map 3095875614 \
-        +host_workshop_map 3070562370 \
-        +host_workshop_map 3070612859 \
-        +host_workshop_map 3121051997 \
-        +host_workshop_map 3127729110 \
-        +host_workshop_map 3121217565 \
-        +host_workshop_map 3132854332
+        +host_workshop_map 3181655247
         
 
 curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"shutdown\"}"
