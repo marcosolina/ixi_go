@@ -40,6 +40,39 @@ echo "mp_free_armor 2" >> $SERVER_FILE
 echo "mp_maxrounds 15" >> $SERVER_FILE
 
 
+# List of maps
+workshop_maps=(
+3070290240
+3070293560
+3070562370
+3070612859
+3070766070
+3071005299
+3071899764
+3074629488
+3075706807
+3077752384
+3084661017
+3085200029
+3085490518
+3095875614
+3100864853
+3114023815
+3121051997
+3121217565
+3127729110
+3132854332
+3150246494
+3157804628
+3165559377
+3181655247
+3195399109
+)
+
+# Get a random map from the list
+random_map=${workshop_maps[$RANDOM % ${#workshop_maps[@]}]}
+
+
 $CS2_DIR/game/bin/linuxsteamrt64/cs2 -dedicated \
         -port 27015 \
         -console \
@@ -55,7 +88,7 @@ $CS2_DIR/game/bin/linuxsteamrt64/cs2 -dedicated \
         +mp_maxrounds 15 \
         +mp_free_armor 2 \
         +sv_setsteamaccount $ENV_STEAM_CSGO_KEY \
-        +host_workshop_map 3181655247
+        +host_workshop_map $random_map
         
 
 curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"shutdown\"}"
