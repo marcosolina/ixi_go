@@ -11,7 +11,7 @@ SERVER_HELPER_SCRIPT=$CS2_DIR/jars/startHelper.sh
 STEAMCMDDIR="${HOMEDIR}/steamcmd"
 SERVER_FILE="${CS2_DIR}/game/csgo/cfg/gamemode_competitive.cfg"
 
-EVENT_DIR=$CS2_DIR/csgo/addons/sourcemod
+EVENT_DIR=$CS2_DIR/game/bin/linuxsteamrt64
 EVENT_FILE=$EVENT_DIR/event.txt
 
 mkdir -p $EVENT_DIR
