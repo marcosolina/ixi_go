@@ -11,6 +11,7 @@ SERVER_HELPER_SCRIPT=$CS2_DIR/jars/startHelper.sh
 STEAMCMDDIR="${HOMEDIR}/steamcmd"
 SERVER_FILE="${CS2_DIR}/game/csgo/cfg/gamemode_competitive.cfg"
 
+# Events stuff
 EVENT_DIR=$CS2_DIR/game/bin/linuxsteamrt64
 EVENT_FILE=$EVENT_DIR/event.txt
 
@@ -38,7 +39,6 @@ sed -i '/^mp_maxrounds/d' $SERVER_FILE
 echo "mp_defuser_allocation 2" >> $SERVER_FILE
 echo "mp_free_armor 2" >> $SERVER_FILE
 echo "mp_maxrounds 15" >> $SERVER_FILE
-
 
 # List of maps
 workshop_maps=(
