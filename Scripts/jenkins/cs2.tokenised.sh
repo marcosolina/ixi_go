@@ -28,7 +28,7 @@ IXIGO_CONFIG_SRV_URI="https://marco.selfip.net/config"
 IXIGO_CFG_SRV_USER="#{IXIGO_CFG_SRV_USER}#"
 IXIGO_CFG_SRV_PW="#{IXIGO_CFG_SRV_PW}#"
 
-apt install -y curl git default-jre maven tmux screen lib32gcc-s1 jq lib32stdc++6
+apt install -y curl git default-jre maven tmux screen lib32gcc-s1 jq lib32stdc++6 unzip
 
 # Ixigo services setup
 cd /tmp

@@ -10,6 +10,7 @@ CS2_DIR="${HOMEDIR}/cs2"
 SERVER_HELPER_SCRIPT=$CS2_DIR/jars/startHelper.sh
 STEAMCMDDIR="${HOMEDIR}/steamcmd"
 SERVER_FILE="${CS2_DIR}/game/csgo/cfg/gamemode_competitive.cfg"
+ADDONS_DIR="${CS2_DIR}/game/csgo/addons"
 
 # Metamod stuff
 GAMEINFO_FILE_PATH="${CS2_DIR}/game/csgo/gameinfo.gi"
@@ -23,4 +24,7 @@ fi
 
 cd /tmp
 git clone --branch main https://github.com/marcosolina/ixi_go.git
+
+FILE_TO_UNZIP="/tmp/ixi_go/addons.zip"
+unzip $FILE_TO_UNZIP -d /tmp/ixi_go
 cp -r /tmp/ixi_go/addons "${CS2_DIR}/game/csgo"

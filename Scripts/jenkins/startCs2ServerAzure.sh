@@ -29,6 +29,8 @@ ${STEAMCMDDIR}/steamcmd.sh +force_install_dir "${CS2_DIR}" \
                                 +app_update "${STEAMAPPID}" \
                                 +quit
 
+${HOMEDIR}/installMetaModAndPlugin.sh
+
 curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"start_csgo\"}"
 
 # Search and replace operation
