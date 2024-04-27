@@ -2,6 +2,8 @@
 
 ## :warning: **This project is still in development.** :warning:
 
+This project was created 4 years ago for CSGO servers. With CS2 few things have changed, so I'm updating the project to work with the new version of the game.
+
 ![Logo](./Misc/Pictures/ixigo-logo.png)
 
 This repository contains the scripts used to setup and run a dedicated CSGO server for our gaming evenings.
