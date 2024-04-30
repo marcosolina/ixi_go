@@ -132,13 +132,14 @@ $CS2_DIR/game/bin/linuxsteamrt64/cs2 -dedicated \
         +host_workshop_map $random_map
         
 
-curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"shutdown\"}"
+#curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"shutdown\"}"
 
 # Give the service some time to
 # process the last DEM file
-echo "Wait for 60 seconds"
-sleep 60
+#echo "Wait for 60 seconds"
+#sleep 60
 
-$SERVER_HELPER_SCRIPT stop
+#$SERVER_HELPER_SCRIPT stop
 
-#sudo shutdown now
+# Reboot the server in case it has crashed
+sudo reboot now
