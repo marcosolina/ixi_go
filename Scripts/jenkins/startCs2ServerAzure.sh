@@ -32,6 +32,7 @@ ${STEAMCMDDIR}/steamcmd.sh +force_install_dir "${CS2_DIR}" \
 ${HOMEDIR}/installMetaModAndPlugin.sh
 
 curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"start_csgo\"}"
+curl --location --request POST 'https://marco.selfip.net/ixigoproxy/ixigo-dem-manager/demmanager/parse/failed'
 
 # Search and replace operation
 sed -i '/^mp_defuser_allocation/d' $SERVER_FILE
