@@ -17,10 +17,6 @@ GAMEINFO_FILE_PATH="${CS2_DIR}/game/csgo/gameinfo.gi"
 STRING_TO_SEARCH='			Game	csgo/addons/metamod'
 AFTER_STRING="			Game_LowViolence	csgo_lv // Perfect World content override"
 
-if [ ! -d "$ADDONS_DIR" ]; then
-    return 0
-fi
-
 # Enabling metamod
 if ! grep -q "$STRING_TO_SEARCH" "$GAMEINFO_FILE_PATH"; then
     sed -i -e "\|$AFTER_STRING|a \\$STRING_TO_SEARCH" "$GAMEINFO_FILE_PATH"
