@@ -73,4 +73,4 @@ Remove-Item -Path $csgoUtilDir -Recurse -Force
 Move-Item -Path "$baseFolder/addons.zip" -Destination "$baseFolder/../.." -Force
 
 git commit -a -m "updating plugin framework"
-git push orign
+git push origin
