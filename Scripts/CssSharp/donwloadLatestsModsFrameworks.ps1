@@ -1,6 +1,9 @@
 
 $baseFolder = $PSScriptRoot
 
+$csgoUtilDir = "$baseFolder\csgo_util"
+git clone "https://github.com/marcosolina/csgo_util.git" $csgoUtilDir
+
 $URL = "https://www.sourcemm.net/downloads.php?branch=dev"
 
 # Fetch HTML content
@@ -43,8 +46,8 @@ $destinationDir = "$baseFolder/addons"
 
 Copy-Item -Path $sourceDir\* -Destination $destinationDir -Recurse -Force
 
-$ixigoPluginDir = "E:\Workspaces\Git\csgo_util\CsgoPlugins\IxigoPlugin"
-$ixigoPluginBinDir = "E:\Workspaces\Git\csgo_util\CsgoPlugins\IxigoPlugin\bin\Debug\net8.0"
+$ixigoPluginDir = "$csgoUtilDir\CsgoPlugins\IxigoPlugin"
+$ixigoPluginBinDir = "$csgoUtilDir\CsgoPlugins\IxigoPlugin\bin\Debug\net8.0"
 
 dotnet add $ixigoPluginDir package CounterStrikeSharp.API
 dotnet clean $ixigoPluginDir
@@ -64,3 +67,10 @@ Remove-Item -Path $metaModeFile
 Remove-Item -Path $cssSharpFile
 Remove-Item -Path $cssSharpUnzipDir -Recurse -Force
 Remove-Item -Path $destinationDir -Recurse -Force
+Remove-Item -Path $csgoUtilDir -Recurse -Force
+
+
+Move-Item -Path "$baseFolder/addons.zip" -Destination "$baseFolder/../.." -Force
+
+git commit -a -m "updating plugin framework"
+git push orign
