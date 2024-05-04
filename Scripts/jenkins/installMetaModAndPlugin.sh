@@ -27,4 +27,8 @@ git clone --branch main https://github.com/marcosolina/ixi_go.git
 
 FILE_TO_UNZIP="/tmp/ixi_go/addons.zip"
 unzip $FILE_TO_UNZIP -d /tmp/ixi_go
+
+sudo chown $LOGGED_USER:$LOGGED_USER -R /tmp/ixi_go
+sudo chmod 766 -R /tmp/ixi_go
+
 cp -r /tmp/ixi_go/addons "${CS2_DIR}/game/csgo"
