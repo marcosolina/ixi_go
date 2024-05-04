@@ -1,3 +1,6 @@
+$LogFile = "C:\tmp\addons.log"
+Start-Transcript -path $LogFile -append
+
 
 $baseFolder = $PSScriptRoot
 
@@ -74,3 +77,5 @@ Move-Item -Path "$baseFolder/addons.zip" -Destination "$baseFolder/../.." -Force
 
 git commit -a -m "updating plugin framework"
 git push origin
+
+Stop-Transcript
