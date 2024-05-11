@@ -12,6 +12,11 @@ STEAMCMDDIR="${HOMEDIR}/steamcmd"
 SERVER_FILE="${CS2_DIR}/game/csgo/cfg/gamemode_competitive.cfg"
 ADDONS_DIR="${CS2_DIR}/game/csgo/addons"
 
+if [ -d "$ADDONS_DIR" ]; then
+    echo "ADDONS_DIR already exists. Exiting..."
+    exit 0
+fi
+
 # Metamod stuff
 GAMEINFO_FILE_PATH="${CS2_DIR}/game/csgo/gameinfo.gi"
 STRING_TO_SEARCH='			Game	csgo/addons/metamod'
