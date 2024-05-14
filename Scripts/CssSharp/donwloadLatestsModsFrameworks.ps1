@@ -5,6 +5,11 @@ Start-Transcript -path $LogFile -append
 
 $baseFolder = $PSScriptRoot
 
+$gitFolder = "$baseFolder/../../"
+
+# Pull the latest changes from the remote repository
+git -C $gitFolder pull origin
+
 ##########################################################
 # Download the latest version of CounterStrikeSharp plugin
 ##########################################################
