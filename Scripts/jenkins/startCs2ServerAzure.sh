@@ -57,7 +57,6 @@ workshop_maps=(
 3070612859
 3070766070
 3070852091
-3071005299
 3071899764
 3075706807
 3077752384
@@ -69,12 +68,10 @@ workshop_maps=(
 3108198185
 3114023815
 3121051997
-3121217565
 3127729110
 3132854332
 3150246494
 3157804628
-3165559377
 3181655247
 3195399109
 )
@@ -110,7 +107,6 @@ $CS2_DIR/game/bin/linuxsteamrt64/cs2 -dedicated \
         +host_workshop_map 3070612859 \
         +host_workshop_map 3070766070 \
         +host_workshop_map 3070852091 \
-        +host_workshop_map 3071005299 \
         +host_workshop_map 3071899764 \
         +host_workshop_map 3075706807 \
         +host_workshop_map 3077752384 \
@@ -122,11 +118,9 @@ $CS2_DIR/game/bin/linuxsteamrt64/cs2 -dedicated \
         +host_workshop_map 3108198185 \
         +host_workshop_map 3114023815 \
         +host_workshop_map 3121051997 \
-        +host_workshop_map 3121217565 \
         +host_workshop_map 3127729110 \
         +host_workshop_map 3132854332 \
         +host_workshop_map 3150246494 \
-        +host_workshop_map 3157804628 \
         +host_workshop_map 3165559377 \
         +host_workshop_map 3181655247 \
         +host_workshop_map 3195399109 \
