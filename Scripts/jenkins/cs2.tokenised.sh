@@ -47,7 +47,8 @@ mvn clean install -f $WORKSPACE_FOLDER/IxigoLibrary/pom.xml
 mvn clean install -f $WORKSPACE_FOLDER/IxigoParent/pom.xml
 mvn clean package -f $WORKSPACE_FOLDER/IxigoServerHelper/pom.xml
 
-git clone --branch main https://github.com/marcosolina/ixi_go.git
+#git clone --branch main https://github.com/marcosolina/ixi_go.git
+git clone --branch dev https://github.com/marcosolina/ixi_go.git
 
 su "${LOGGED_USER}" -c \
 		"mkdir -p \"${JAR_FOLDER}\" \
