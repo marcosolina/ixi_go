@@ -28,7 +28,8 @@ if ! grep -q "$STRING_TO_SEARCH" "$GAMEINFO_FILE_PATH"; then
 fi
 
 cd /tmp
-git clone --branch main https://github.com/marcosolina/ixi_go.git
+#git clone --branch main https://github.com/marcosolina/ixi_go.git
+git clone --branch dev https://github.com/marcosolina/ixi_go.git
 
 FILE_TO_UNZIP="/tmp/ixi_go/addons.zip"
 unzip $FILE_TO_UNZIP -d /tmp/ixi_go
