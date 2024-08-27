@@ -32,7 +32,8 @@ apt install -y curl git default-jre maven tmux screen lib32gcc-s1 jq lib32stdc++
 
 # Ixigo services setup
 cd /tmp
-git clone --branch main https://github.com/marcosolina/csgo_util.git
+#git clone --branch main https://github.com/marcosolina/csgo_util.git
+git clone --branch dev https://github.com/marcosolina/csgo_util.git
 
 WORKSPACE_FOLDER=/tmp/csgo_util
 
