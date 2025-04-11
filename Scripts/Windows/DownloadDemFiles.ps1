@@ -3,7 +3,7 @@ Write-Host "Copying the *.dem files from the server to the current folder" -Fore
 $currentFolder = $PSScriptRoot
 
 scp -o StrictHostKeyChecking=no marco@ixigo.selfip.net:/home/marco/cs2/game/csgo/replays/*.dem $currentFolder
-#scp -o StrictHostKeyChecking=no marco@ixigo.selfip.net:/home/marco/cs2/game/csgo/addons/metamod/replays/*.dem $currentFolder
+scp -o StrictHostKeyChecking=no marco@ixigo.selfip.net:/home/marco/cs2/game/csgo/addons/metamod/replays/*.dem $currentFolder
 
 Write-Host "Do you want to push the files to the server? (Y/N)" -ForegroundColor Green -NoNewline
 $pushFiles = Read-Host " "
