@@ -47,7 +47,7 @@ echo "The CS Sharp plugin id $ID"
 
 # New version available, download the file
 CSS_SHARP_FILE="$BASE_FOLDER/cssharp.zip"
-ASSETS=$(echo $HTML | jq -r '.assets[] | select(.name | test("with-runtime-build.*linux")) | .browser_download_url')
+ASSETS=$(echo $HTML | jq -r '.assets[] | select(.name | test("with-runtime.*linux")) | .browser_download_url')
 for URL in $ASSETS; do
     curl -L -o "$CSS_SHARP_FILE" "$URL"
 done
