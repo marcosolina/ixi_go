@@ -137,4 +137,4 @@ $CS2_DIR/game/bin/linuxsteamrt64/cs2 -dedicated \
 #$SERVER_HELPER_SCRIPT stop
 
 # Reboot the server in case it has crashed
-sudo reboot now
+#sudo reboot now
