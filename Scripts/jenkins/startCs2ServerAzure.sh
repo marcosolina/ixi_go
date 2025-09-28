@@ -29,7 +29,7 @@ ${STEAMCMDDIR}/steamcmd.sh +force_install_dir "${CS2_DIR}" \
                                 +app_update "${STEAMAPPID}" \
                                 +quit
 
-${HOMEDIR}/installMetaModAndPlugin.sh
+#${HOMEDIR}/installMetaModAndPlugin.sh
 
 curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"start_csgo\"}"
 curl --location --request POST 'https://marco.selfip.net/ixigoproxy/ixigo-dem-manager/demmanager/parse/failed'
@@ -94,37 +94,7 @@ $CS2_DIR/game/bin/linuxsteamrt64/cs2 -dedicated \
         +map de_inferno \
         +mp_maxrounds 15 \
         +mp_free_armor 2 \
-        +sv_setsteamaccount $ENV_STEAM_CSGO_KEY \
-        +host_workshop_map 3070290240 \
-        +host_workshop_map 3070293560 \
-        +host_workshop_map 3070550406 \
-        +host_workshop_map 3070562370 \
-        +host_workshop_map 3070563536 \
-        +host_workshop_map 3070581293 \
-        +host_workshop_map 3070584943 \
-        +host_workshop_map 3070593234 \
-        +host_workshop_map 3070594412 \
-        +host_workshop_map 3070612859 \
-        +host_workshop_map 3070766070 \
-        +host_workshop_map 3070852091 \
-        +host_workshop_map 3071899764 \
-        +host_workshop_map 3075706807 \
-        +host_workshop_map 3077752384 \
-        +host_workshop_map 3084661017 \
-        +host_workshop_map 3085200029 \
-        +host_workshop_map 3085490518 \
-        +host_workshop_map 3095875614 \
-        +host_workshop_map 3100864853 \
-        +host_workshop_map 3108198185 \
-        +host_workshop_map 3114023815 \
-        +host_workshop_map 3121051997 \
-        +host_workshop_map 3127729110 \
-        +host_workshop_map 3132854332 \
-        +host_workshop_map 3150246494 \
-        +host_workshop_map 3165559377 \
-        +host_workshop_map 3181655247 \
-        +host_workshop_map 3195399109 \
-        +host_workshop_map $random_map
+        +sv_setsteamaccount $ENV_STEAM_CSGO_KEY
         
 
 #curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"shutdown\"}"
