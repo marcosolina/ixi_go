@@ -80,7 +80,9 @@ workshop_maps=(
 random_map=${workshop_maps[$RANDOM % ${#workshop_maps[@]}]}
 
 
-$CS2_DIR/game/bin/linuxsteamrt64/cs2 -dedicated \
+cd $CS2_DIR/game 
+
+./cs2.sh -dedicated \
         -port 27015 \
         -console \
         -usercon \
