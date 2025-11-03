@@ -109,4 +109,4 @@ cd $CS2_DIR/game
 #$SERVER_HELPER_SCRIPT stop
 
 # Reboot the server in case it has crashed
-#sudo reboot now
+sudo reboot now
