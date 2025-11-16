@@ -29,7 +29,7 @@ ${STEAMCMDDIR}/steamcmd.sh +force_install_dir "${CS2_DIR}" \
                                 +app_update "${STEAMAPPID}" \
                                 +quit
 
-#${HOMEDIR}/installMetaModAndPlugin.sh
+${HOMEDIR}/installMetaModAndPlugin.sh
 
 curl --location --request POST "https://marco.selfip.net/ixigoproxy/ixigo-event-dispatcher/eventsdispatcher/event" --header 'Content-Type: application/json' --data-raw "{\"event_name\": \"start_csgo\"}"
 curl --location --request POST 'https://marco.selfip.net/ixigoproxy/ixigo-dem-manager/demmanager/parse/failed'
@@ -42,43 +42,6 @@ sed -i '/^mp_maxrounds/d' $SERVER_FILE
 echo "mp_defuser_allocation 2" >> $SERVER_FILE
 echo "mp_free_armor 2" >> $SERVER_FILE
 echo "mp_maxrounds 15" >> $SERVER_FILE
-
-# List of maps
-workshop_maps=(
-3070290240
-3070293560
-3070550406
-3070562370
-3070563536
-3070581293
-3070584943
-3070593234
-3070594412
-3070612859
-3070766070
-3070852091
-3071899764
-3075706807
-3077752384
-3084661017
-3085200029
-3085490518
-3095875614
-3100864853
-3108198185
-3114023815
-3121051997
-3127729110
-3132854332
-3150246494
-3157804628
-3181655247
-3195399109
-)
-
-# Get a random map from the list
-random_map=${workshop_maps[$RANDOM % ${#workshop_maps[@]}]}
-
 
 cd $CS2_DIR/game 
 
@@ -109,4 +72,4 @@ cd $CS2_DIR/game
 #$SERVER_HELPER_SCRIPT stop
 
 # Reboot the server in case it has crashed
-#sudo reboot now
+sudo reboot now
