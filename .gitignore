@@ -9,3 +9,4 @@
 !/CsgoServer/csgo/subscribed_file_ids.txt
 Scripts/CssSharp/addons.zip
 *.dem
+/.vs
