@@ -36,22 +36,15 @@ git clone --branch main https://github.com/marcosolina/csgo_util.git
 
 WORKSPACE_FOLDER=/tmp/csgo_util
 
-mvn clean install -f $WORKSPACE_FOLDER/IxigoServerHelperContract/pom.xml
-mvn clean install -f $WORKSPACE_FOLDER/IxigoDemManagerContract/pom.xml
-mvn clean install -f $WORKSPACE_FOLDER/IxigoDiscordBotContract/pom.xml
-mvn clean install -f $WORKSPACE_FOLDER/IxigoEventDispatcherContract/pom.xml
-mvn clean install -f $WORKSPACE_FOLDER/IxigoPlayersManagerContract/pom.xml
-mvn clean install -f $WORKSPACE_FOLDER/IxigoRconApiContract/pom.xml
-mvn clean install -f $WORKSPACE_FOLDER/IxigoLibrary/pom.xml
-mvn clean install -f $WORKSPACE_FOLDER/IxigoParent/pom.xml
-mvn clean package -f $WORKSPACE_FOLDER/IxigoServerHelper/pom.xml
+# The root aggregator builds server-helper plus the shared modules it needs, in order
+mvn -B -DskipTests clean package -f $WORKSPACE_FOLDER/pom.xml -pl services/IxigoServerHelper -am
 
 git clone --branch main https://github.com/marcosolina/ixi_go.git
 
 su "${LOGGED_USER}" -c \
 		"mkdir -p \"${JAR_FOLDER}\" \
 				&& cp /tmp/ixi_go/Scripts/jars/startHelper.sh \"${JAR_FOLDER}\" \
-            && cp $WORKSPACE_FOLDER/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar \
+            && cp $WORKSPACE_FOLDER/services/IxigoServerHelper/target/IxigoServerHelper*.jar $JAR_FOLDER/IxigoServerHelper.jar \
             && sed -i -e 's/\r$//' $JAR_FOLDER/*.sh \
             && chmod +x $JAR_FOLDER/*" \
 
