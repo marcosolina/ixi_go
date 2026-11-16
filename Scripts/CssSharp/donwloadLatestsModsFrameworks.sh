@@ -60,8 +60,8 @@ cp -r "$SOURCE_DIR/"* "$DESTINATION_DIR/"
 #################################################
 CSGO_UTIL_DIR="$BASE_FOLDER/csgo_util"
 git clone "https://github.com/marcosolina/csgo_util.git" "$CSGO_UTIL_DIR"
-IXIGO_PLUGIN_DIR="$CSGO_UTIL_DIR/CsgoPlugins/IxigoPlugin"
-IXIGO_PLUGIN_BIN_DIR="$CSGO_UTIL_DIR/CsgoPlugins/IxigoPlugin/bin/Debug/net8.0"
+IXIGO_PLUGIN_DIR="$CSGO_UTIL_DIR/plugins/IxigoPlugin"
+IXIGO_PLUGIN_BIN_DIR="$CSGO_UTIL_DIR/plugins/IxigoPlugin/bin/Debug/net8.0"
 
 # Build the plugin
 dotnet add "$IXIGO_PLUGIN_DIR" package CounterStrikeSharp.API

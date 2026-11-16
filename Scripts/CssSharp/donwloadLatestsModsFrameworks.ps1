@@ -84,8 +84,8 @@ Copy-Item -Path $sourceDir\* -Destination $destinationDir -Recurse -Force
 ################################################# 
 $csgoUtilDir = "$baseFolder\csgo_util"
 git clone "https://github.com/marcosolina/csgo_util.git" $csgoUtilDir
-$ixigoPluginDir = "$csgoUtilDir\CsgoPlugins\IxigoPlugin"
-$ixigoPluginBinDir = "$csgoUtilDir\CsgoPlugins\IxigoPlugin\bin\Debug\net8.0"
+$ixigoPluginDir = "$csgoUtilDir\plugins\IxigoPlugin"
+$ixigoPluginBinDir = "$csgoUtilDir\plugins\IxigoPlugin\bin\Debug\net8.0"
 
 # Build the plugin
 dotnet add $ixigoPluginDir package CounterStrikeSharp.API
